@@ -1,0 +1,398 @@
+.history-page{
+    background:#f6f3ff;
+    padding:60px 8%;
+    font-family:'Poppins',sans-serif;
+    overflow-x:hidden;
+    background:linear-gradient(180deg,#f6f3ff,#efe9ff);
+}
+
+
+
+/* HERO */
+
+.history-hero{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:40px;
+    max-width:1200px;
+    margin:0 auto 60px auto;
+}
+
+
+
+.history-text{
+    max-width:520px;
+}
+
+.history-text h1{
+    font-size:56px;
+    color:#6c5ce7;
+    margin-bottom:20px;
+}
+
+.history-text h1::after{
+    content:"";
+    display:block;
+    width:250px;
+    height:3px;
+    background:#d9d2ff;
+    margin-top:18px;
+    border-radius:10px;
+}
+
+.history-text p{
+    font-size:18px;
+    line-height:1.6;
+    color:#555;
+}
+
+.history-hero img{
+    width:100%;
+    max-width:420px;
+}
+
+/* GRID */
+
+.history-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:30px;
+    max-width:1200px;
+    margin:0 auto;
+}
+
+
+/* CARD */
+
+.history-card{
+    background:white;
+    border-radius:22px;
+    padding:28px;
+    display:flex;
+    justify-content:space-between;
+    background:linear-gradient(145deg,#ffffff,#f6f3ff);
+    align-items:center;
+    text-decoration:none;
+    color:inherit;
+    box-shadow:0 12px 25px rgba(0,0,0,0.08);
+    transition:transform .35s ease, box-shadow .35s ease;
+    min-height:230px;
+    cursor:pointer;
+    overflow:hidden;
+}
+
+.history-card h3::after{
+    content:"";
+    display:block;
+    width:80px;
+    height:2px;
+    background:#dcd6ff;
+    margin-top:12px;
+    border-radius:10px;
+}
+
+
+.history-card:hover{
+    transform:translateY(-6px) scale(1.02);
+
+    box-shadow:0 20px 40px rgba(0,0,0,0.15);
+}
+
+.history-card img{
+    width:140px;
+    transition:transform .4s ease;
+}
+
+.history-card:hover img{
+
+    transform:scale(1.08);
+
+}
+
+.history-card h3{
+    font-size:22px;
+    color:#6c63ff;
+    margin-bottom:10px;
+}
+
+.history-card p{
+    font-size:16px;
+    color:#666;
+}
+
+/* TIMELINE */
+
+.timeline{
+    margin-top:60px;
+    text-align:center;
+    background:#efe6ff;
+    padding:40px;
+    border-radius:20px;
+}
+
+.timeline-line{
+    display:flex;
+    justify-content:space-around;
+    margin:20px 0;
+}
+
+.timeline-btn{
+    background:#8e7cff;
+    color:white;
+    border:none;
+    padding:10px 25px;
+    border-radius:20px;
+    cursor:pointer;
+}
+
+/* MOBILE */
+
+@media (max-width:768px){
+
+    .history-page{
+        padding:30px 20px;
+    }
+
+    .history-hero{
+        flex-direction:column;
+        align-items:center;
+        text-align:center;
+    }
+
+    .history-text{
+        max-width:100%;
+    }
+
+    .history-text h1{
+        font-size:36px;
+    }
+
+    .history-text h1::after{
+        width:120px;
+        margin-left:auto;
+        margin-right:auto;
+    }
+
+    .history-hero img{
+        width:90%;
+        max-width:200px;
+    }
+
+    .history-grid{
+        grid-template-columns:1fr;
+        gap:20px;
+    }
+
+    .history-card{
+        flex-direction:column;
+        align-items:center;
+        text-align:center;
+        gap:15px;
+    }
+
+    .history-card h3::after{
+        margin-left:auto;
+        margin-right:auto;
+    }
+
+    .history-card img{
+        width:90px;
+        max-width:100%;
+    }
+
+}
+
+.history-hero,
+.history-grid{
+    width:100%;
+    max-width:1200px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+img{
+    max-width:100%;
+    height:auto;
+    display:block;
+}
+
+@keyframes cardZoom {
+
+    0%{
+        transform:scale(1);
+    }
+
+    100%{
+        transform:scale(1.08);
+    }
+
+}
+
+.card-clicked{
+
+    transform:scale(1.08);
+
+    transition:transform .35s ease;
+
+}
+
+.modal-overlay{
+
+    position:fixed;
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    background:rgba(0,0,0,0.6);
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    z-index:999;
+
+}
+
+.modal-window{
+
+    width:900px;
+
+    height:80vh;
+
+    background:white;
+
+    border-radius:20px;
+
+    padding:40px;
+
+    overflow-y:auto;
+
+    position:relative;
+
+}
+
+.close-btn{
+
+    position:absolute;
+
+    top:15px;
+    right:20px;
+
+    font-size:22px;
+
+    background:none;
+
+    border:none;
+
+    cursor:pointer;
+
+}
+
+.woman-block{
+
+    display:flex;
+
+    gap:20px;
+
+    margin-bottom:30px;
+
+    background:#f4f4f4;
+
+    padding:20px;
+
+    border-radius:15px;
+
+}
+
+.woman-block img{
+
+    width:160px;
+
+    border-radius:10px;
+
+    object-fit:cover;
+
+}
+
+.women-slider{
+    display:flex;
+    gap:30px;
+    overflow-x:auto;
+    padding:40px 20px;
+    background:black;
+    border-radius:25px;
+}
+
+.woman-card{
+    min-width:200px;
+    background:#f4f4f4;
+    border-radius:20px;
+    padding:15px;
+    text-align:center;
+    transition:0.3s;
+}
+
+.woman-card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+    border-radius:15px;
+    margin-bottom:10px;
+}
+
+.woman-card h3{
+    font-size:16px;
+    margin-bottom:6px;
+}
+
+.woman-card p{
+    font-size:13px;
+    color:#555;
+}
+
+.woman-card:hover{
+    transform:scale(1.08);
+}
+
+body[data-theme="dark"] .history-page{
+    background:linear-gradient(180deg,#11162a,#1a2138);
+}
+
+body[data-theme="dark"] .history-text h1,
+body[data-theme="dark"] .history-card h3{
+    color:#a99dff;
+}
+
+body[data-theme="dark"] .history-text p,
+body[data-theme="dark"] .history-card p,
+body[data-theme="dark"] .woman-card p{
+    color:#bcc7df;
+}
+
+body[data-theme="dark"] .history-card,
+body[data-theme="dark"] .timeline,
+body[data-theme="dark"] .modal-window,
+body[data-theme="dark"] .woman-block,
+body[data-theme="dark"] .woman-card{
+    background:#202843;
+    color:#f4f7ff;
+    box-shadow:0 18px 45px rgba(0,0,0,0.32);
+}
+
+body[data-theme="dark"] .history-card{
+    background:linear-gradient(145deg,#202843,#171d31);
+}
+
+body[data-theme="dark"] .history-text h1::after,
+body[data-theme="dark"] .history-card h3::after{
+    background:rgba(169,157,255,0.35);
+}
+
+body[data-theme="dark"] .timeline-btn,
+body[data-theme="dark"] .close-btn{
+    background:#8f81ff;
+    color:#ffffff;
+}

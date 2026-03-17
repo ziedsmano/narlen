@@ -1,0 +1,580 @@
+/* PAGE */
+
+.bio-page{
+    background:#f6f4fb;
+    font-family:'Poppins',sans-serif;
+}
+
+
+/* HERO */
+
+.hero-background{
+
+    width:100%;
+    height:300px;
+
+    background-image:url("../images/womenhistory.png");
+
+    background-size:cover;
+    background-position:center 20%;
+    background-repeat:no-repeat;
+
+    display:flex;
+    align-items:flex-end;
+
+}
+
+.content-container{
+
+    max-width:1500px;
+    margin:0 auto;
+    padding:0 40px;
+
+}
+
+.bio-hero{
+
+    background:white;
+
+    padding:40px 60px;
+
+    border-radius:20px;
+
+    transform:translateY(80px);
+
+    box-shadow:0 15px 35px rgba(0,0,0,0.12);
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    width:95%;
+    max-width:1500px;
+
+    margin:0 auto;
+
+}
+
+
+.bio-left h1{
+
+    font-size:42px;
+    margin:0;
+
+}
+
+.bio-left p{
+
+    color:#777;
+    margin-top:10px;
+
+}
+
+.bio-left h1::after{
+
+    content:"";
+    display:block;
+
+    width:220px;
+    height:2px;
+
+    background:#6b4cff;
+
+    margin-top:10px;
+
+}
+
+
+/* QUOTE */
+
+.bio-quote{
+
+    max-width:550px;
+
+    font-style:italic;
+
+    color:#6b4cff;
+
+    line-height:1.6;
+
+}
+
+
+/* FILTER */
+
+.bio-filter{
+
+    max-width:1500px;
+
+    margin:260px auto 60px;
+
+    display:flex;
+
+    gap:15px;
+
+    align-items:center;
+
+    padding:0 40px;
+    animation:fadeFilter .7s ease;
+
+}
+
+.bio-filter select{
+
+    padding:10px 16px;
+
+    border-radius:10px;
+
+    border:none;
+
+    background:white;
+
+    box-shadow:0 4px 12px rgba(0,0,0,0.08);
+
+    transition:all .35s ease;
+
+    cursor:pointer;
+
+}
+
+.bio-filter select:hover{
+
+    transform:translateY(-2px);
+
+    box-shadow:0 10px 20px rgba(0,0,0,0.12);
+
+}
+
+.bio-filter button{
+
+    padding:10px 28px;
+
+    background:#6b4cff;
+
+    color:white;
+
+    border:none;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    transition:all .35s ease;
+
+    box-shadow:0 6px 18px rgba(107,76,255,0.35);
+
+}
+
+.bio-filter button:hover{
+
+    transform:translateY(-3px) scale(1.04);
+
+    box-shadow:0 12px 28px rgba(107,76,255,0.45);
+
+}
+
+.bio-filter button:hover{
+
+    transform:translateY(-3px) scale(1.04);
+
+    box-shadow:0 12px 28px rgba(107,76,255,0.45);
+
+}
+
+
+/* GRID */
+
+.bio-grid{
+
+    max-width:1500px;
+
+    margin:60px auto;
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:25px;
+
+    padding:0 40px;
+
+}
+
+
+/* CARD */
+
+.bio-card{
+
+    position:relative;
+
+    height:260px;
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    cursor:pointer;
+
+    background:white;
+
+    box-shadow:0 8px 20px rgba(0,0,0,0.08);
+
+    transition:all .35s ease;
+
+    animation:fadeUp .6s ease;
+
+}
+
+
+.bio-card:hover{
+
+    transform:translateY(-10px) scale(1.02);
+
+    box-shadow:0 20px 40px rgba(0,0,0,0.18);
+
+}
+
+
+/* IMAGE */
+
+.bio-card img{
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+    object-position:center 30%;
+
+    transition:transform .4s;
+
+}
+
+.bio-card:hover img{
+
+    transform:scale(1.05);
+
+}
+
+
+/* NAME OVERLAY */
+
+.name-overlay{
+
+    position:absolute;
+
+    bottom:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    display:flex;
+
+    align-items:flex-end;
+    justify-content:center;
+
+    padding-bottom:25px;
+
+    color:white;
+
+    font-size:20px;
+
+    text-shadow:0 2px 8px rgba(0,0,0,0.7);
+
+    z-index:2;
+
+}
+
+.name-overlay::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+    right:0;
+    bottom:0;
+
+    height:120px;
+
+    background:linear-gradient(
+            to top,
+            rgba(0,0,0,0.85),
+            rgba(0,0,0,0.4),
+            transparent
+    );
+
+    z-index:1;
+
+}
+
+.name-overlay h3{
+
+    position:relative;
+    z-index:2;
+
+}
+
+
+/* HOVER INFO */
+
+.overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    padding:30px;
+
+    background:rgba(0,0,0,0.8);
+
+    opacity:0;
+
+    transition:opacity .35s ease;
+
+    color:white;
+
+}
+
+.overlay h3{
+
+    margin:0;
+    font-size:24px;
+
+}
+
+.overlay p{
+
+    margin-top:10px;
+
+    font-size:15px;
+
+    line-height:1.5;
+
+}
+
+.bio-card:hover .overlay{
+
+    opacity:1;
+
+}
+
+.bio-card:hover .name-overlay{
+
+    opacity:0;
+
+}
+
+
+/* PAGINATION */
+
+.pagination{
+
+    margin:100px auto;
+
+    display:flex;
+
+    justify-content:center;
+    animation:fadePagination .6s ease;
+
+
+    gap:12px;
+
+}
+
+.pagination button,
+.pagination span{
+
+    padding:10px 18px;
+
+    background:white;
+
+    border-radius:10px;
+
+    border:none;
+
+    box-shadow:0 4px 10px rgba(0,0,0,0.08);
+
+    cursor:pointer;
+
+    transition:all .35s ease;
+
+}
+
+.pagination button:hover,
+.pagination span:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 12px 22px rgba(0,0,0,0.15);
+
+}
+
+.pagination button:active{
+
+    transform:scale(.92);
+
+}
+
+.pagination .active{
+
+    background:linear-gradient(135deg,#6b4cff,#8a6cff);
+
+    color:white;
+
+    box-shadow:0 8px 20px rgba(107,76,255,0.35);
+
+}
+
+/* FOOTER */
+
+.site-footer{
+
+    width:100%;
+
+    background:#c9c3dd;
+
+    text-align:center;
+
+    padding:70px 20px;
+
+    margin-top:40px;
+
+}
+
+
+/* ANIMATION */
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+
+    }
+
+}
+
+
+/* TABLET */
+
+@media(max-width:1000px){
+
+    .bio-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+    .bio-hero{
+
+        flex-direction:column;
+
+        gap:20px;
+
+        align-items:flex-start;
+
+    }
+
+}
+
+
+/* MOBILE */
+
+@media(max-width:600px){
+
+    .bio-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .bio-page{
+
+        padding:30px 20px;
+
+    }
+
+    .bio-filter{
+
+        flex-wrap:wrap;
+
+    }
+
+    .bio-left h1{
+
+        font-size:30px;
+
+    }
+
+}
+
+
+@keyframes fadeFilter{
+
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+@keyframes fadePagination{
+
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+body[data-theme="dark"] .bio-page{
+    background:#0f1220;
+    color:#f4f7ff;
+}
+
+body[data-theme="dark"] .bio-hero,
+body[data-theme="dark"] .bio-filter select,
+body[data-theme="dark"] .bio-card,
+body[data-theme="dark"] .pagination button,
+body[data-theme="dark"] .pagination span{
+    background:#1c2339;
+    color:#f4f7ff;
+    box-shadow:0 14px 34px rgba(0,0,0,0.3);
+}
+
+body[data-theme="dark"] .bio-left p,
+body[data-theme="dark"] .bio-quote{
+    color:#bcc7df;
+}
+
+body[data-theme="dark"] .bio-filter select{
+    border:1px solid rgba(255,255,255,0.08);
+}

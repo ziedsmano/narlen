@@ -1,0 +1,317 @@
+.sleep-overlay{
+
+    position:fixed;
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    background:rgba(0,0,0,0.6);
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    backdrop-filter:blur(6px);
+
+    z-index:999;
+
+    animation:overlayFade 0.35s ease;
+
+}
+
+
+/* MODAL */
+
+.sleep-modal{
+
+    width:1100px;
+    max-width:95%;
+
+    height:85vh;
+
+    border-radius:25px;
+
+    overflow:hidden;
+
+    position:relative;
+
+    box-shadow:0 30px 60px rgba(0,0,0,0.45);
+
+    animation:modalOpen 0.35s ease;
+
+}
+
+
+/* CLOSE BUTTON */
+
+.sleep-close{
+
+    position:absolute;
+
+    top:18px;
+    right:18px;
+
+    width:46px;
+    height:46px;
+
+    border-radius:50%;
+
+    border:none;
+
+    background:#4f8cff;
+
+    color:white;
+
+    font-size:20px;
+
+    cursor:pointer;
+
+    z-index:10;
+
+    transition:all 0.25s ease;
+
+}
+
+/* hover animation */
+
+.sleep-close:hover{
+
+    transform:scale(1.15) rotate(90deg);
+    background:#3b74e6;
+
+}
+
+.sleep-close:active{
+
+    transform:scale(0.9);
+
+}
+
+
+/* CONTAINER */
+
+.sleep-container{
+
+    position:relative;
+
+    height:100%;
+
+    overflow-y:auto;
+
+    padding:60px;
+
+    background-image:url("../images/sleep-modal/sleep-bg.jpg");
+
+    background-size:cover;
+    background-position:center;
+
+}
+
+
+/* DARK BACKGROUND LAYER */
+
+.sleep-container::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:rgba(0,0,0,0.55);
+
+    z-index:0;
+
+}
+
+
+/* CONTENT ABOVE OVERLAY */
+
+.sleep-container > *{
+
+    position:relative;
+    z-index:2;
+
+}
+
+
+/* TITLE */
+
+.sleep-title{
+
+    text-align:center;
+
+    font-size:42px;
+
+    margin-bottom:10px;
+
+    color:white;
+
+    text-shadow:0 4px 20px rgba(0,0,0,0.8);
+
+}
+
+
+/* SUBTITLE */
+
+.sleep-subtitle{
+
+    width:calc(100% + 120px);
+    margin-left:-60px;
+
+    text-align:center;
+
+    color:white;
+
+    margin-bottom:40px;
+
+    padding:12px 40px;
+
+    background:rgba(0,0,0,0.35);
+
+    backdrop-filter:blur(6px);
+
+    text-shadow:0 2px 10px rgba(0,0,0,0.6);
+
+}
+
+
+/* CARDS */
+
+.sleep-card{
+    animation: cardFade 0.6s ease;
+    display:flex;
+    gap:25px;
+    align-items:center;
+
+    background:rgba(255,255,255,0.75);
+
+    backdrop-filter:blur(10px);
+
+    padding:28px;
+
+    border-radius:22px;
+
+    margin-bottom:30px;
+
+    max-width:900px;
+    margin-left:auto;
+    margin-right:auto;
+
+    box-shadow:0 10px 30px rgba(0,0,0,0.25);
+
+}
+
+
+/* IMAGE */
+
+.sleep-card img{
+
+    width:230px;
+    height:160px;
+
+    object-fit:cover;
+
+    border-radius:15px;
+
+}
+
+
+/* TEXT */
+
+.sleep-text h3{
+
+    font-size:22px;
+    margin-bottom:10px;
+
+}
+
+.sleep-text p{
+
+    color:#333;
+    line-height:1.6;
+
+}
+
+
+.sleep-container::-webkit-scrollbar{
+    width:6px;
+}
+
+.sleep-container::-webkit-scrollbar-track{
+    background:transparent;
+}
+
+.sleep-container::-webkit-scrollbar-thumb{
+
+    background:rgba(120,160,255,0.35);
+
+    border-radius:10px;
+
+    transition:0.3s;
+
+}
+
+/* hover */
+
+.sleep-container::-webkit-scrollbar-thumb:hover{
+
+    background:rgba(120,160,255,0.55);
+
+}
+
+/* ANIMATIONS */
+
+@keyframes overlayFade{
+
+    from{
+        opacity:0;
+    }
+
+    to{
+        opacity:1;
+    }
+
+}
+
+@keyframes modalOpen{
+
+    from{
+        transform:scale(0.92);
+        opacity:0;
+    }
+
+    to{
+        transform:scale(1);
+        opacity:1;
+    }
+
+}
+@keyframes cardFade{
+
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+body[data-theme="dark"] .sleep-modal{
+    background:#161c30;
+}
+
+body[data-theme="dark"] .sleep-card{
+    background:rgba(28,35,57,0.88);
+    color:#f4f7ff;
+}
+
+body[data-theme="dark"] .sleep-text p{
+    color:#d4ddf1;
+}
