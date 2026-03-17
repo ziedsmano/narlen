@@ -3,6 +3,7 @@ import { NavLink } from "react-router-dom"
 function Navbar({ theme, onToggleTheme }){
     const themeLabel = theme === "dark" ? "Light mode" : "Dark mode"
 
+
     return(
 
         <div className="navbar">
