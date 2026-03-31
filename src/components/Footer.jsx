@@ -1,11 +1,19 @@
-function Footer(){
+import { useLanguage } from "../context/LanguageContext"
 
-    return(
+const copy = {
+    en: "Together we can create a world where every girl has equal opportunities.",
+    ru: "Вместе мы можем создать мир, в котором у каждой девушки будут равные возможности.",
+    kz: "Біз бірге әрбір қызға тең мүмкіндік берілетін әлем құра аламыз."
+}
 
+function Footer() {
+    const { language } = useLanguage()
+
+    return (
         <footer className="footer">
 
             <p>
-                Together we can create a world where every girl has equal opportunities.
+                {copy[language]}
             </p>
 
             <p className="footer-email">
@@ -13,9 +21,7 @@ function Footer(){
             </p>
 
         </footer>
-
     )
-
 }
 
 export default Footer

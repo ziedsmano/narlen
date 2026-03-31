@@ -7,113 +7,124 @@ import water1 from "../images/water-modal/water-hormones.png"
 import water2 from "../images/water-modal/water-skin.png"
 import water3 from "../images/water-modal/water-energy.png"
 
+const WATER_SOURCE_URL = "https://duyguhastanesi.com.tr/ergenlik-doneminde-saglikli-beslenmenin-onemi/"
+
 function WaterModal({ isOpen, onClose }) {
 
-    const [show,setShow] = useState(isOpen)
-    const [closing,setClosing] = useState(false)
+    const [show, setShow] = useState(isOpen)
+    const [closing, setClosing] = useState(false)
 
-    useEffect(()=>{
-        if(isOpen){
+    useEffect(() => {
+        if (isOpen) {
             setShow(true)
         }
-    },[isOpen])
+    }, [isOpen])
 
-    if(!show) return null
+    if (!show) return null
 
-    function handleClose(){
+    function handleClose() {
 
         setClosing(true)
 
-        setTimeout(()=>{
+        setTimeout(() => {
             setClosing(false)
             setShow(false)
             onClose()
-        },450)
+        }, 450)
 
     }
 
-    return(
+    return (
 
-        <div className={`water-overlay ${closing ? "overlay-closing" : ""}`}>
+        <div className={`water-overlay app-modal-overlay ${closing ? "overlay-closing" : ""}`}>
 
-            <div className={`water-modal ${closing ? "modal-closing" : ""}`}>
+            <div
+                className={`water-modal app-modal-shell ${closing ? "modal-closing" : ""}`}
+                role="dialog"
+                aria-modal="true"
+                aria-labelledby="water-modal-title"
+            >
 
                 <button
-                    className="water-close"
+                    className="water-close app-modal-close"
                     onClick={handleClose}
+                    aria-label="Close dialog"
+                    data-read-aloud-ignore="true"
                 >
-                    ✕
+                    ×
                 </button>
 
                 <div
-                    className="water-container"
-                    style={{backgroundImage:`url(${bg})`}}
+                    className="water-container app-modal-content app-modal-content--water"
+                    data-read-aloud-target="true"
+                    style={{ backgroundImage: `url(${bg})` }}
                 >
 
-                    <h1 className="water-title">
-                        Hydration & Your Body
+                    <h1 id="water-modal-title" className="water-title">
+                        Healthy Eating Habits
                     </h1>
 
                     <p className="water-subtitle">
-                        Discover how water supports hormones, skin health and brain energy during puberty.
+                        Learn why balanced eating habits during adolescence support energy, focus and long-term health.
                     </p>
 
+                    <div className="water-card" data-read-aloud-block="true">
 
-                    <div className="water-card">
-
-                        <img src={water1} alt="hormones"/>
+                        <img src={water1} alt="hormones" />
 
                         <div className="water-text">
 
-                            <h3>1. Hormonal Messengers and Fluid Flow</h3>
+                            <h3>1. Say No to Fast Food</h3>
 
                             <p>
-                                Hormones are chemical messengers that travel through the bloodstream.
-                                Drinking enough water helps maintain healthy blood volume so these
-                                signals can move efficiently throughout your body and support growth
-                                and development during puberty.
+                                The first wrong eating habit is fast food consumption. Adolescents usually prefer to eat quickly, so they often choose fast food restaurants. However, fast food contains a high amount of fat, sugar and salt. Consuming fast food on a regular basis can lead to health problems such as obesity, heart disease and diabetes.
                             </p>
 
                         </div>
 
                     </div>
 
+                    <div className="water-card" data-read-aloud-block="true">
 
-                    <div className="water-card">
-
-                        <img src={water2} alt="skin"/>
+                        <img src={water2} alt="skin" />
 
                         <div className="water-text">
 
-                            <h3>2. Skin Resilience and Natural Glow</h3>
+                            <h3>2. Overconsumption of Junk Food</h3>
 
                             <p>
-                                During puberty your skin becomes more active due to hormonal changes.
-                                Proper hydration supports skin elasticity, improves circulation and
-                                helps maintain a healthy, natural glow.
+                                The second wrong eating habit is the consumption of junk food. Such foods usually contain a lot of sugar. Overconsumption of junk food can cause weight gain and dental health problems.
                             </p>
 
                         </div>
 
                     </div>
 
+                    <div className="water-card" data-read-aloud-block="true">
 
-                    <div className="water-card">
-
-                        <img src={water3} alt="energy"/>
+                        <img src={water3} alt="energy" />
 
                         <div className="water-text">
 
-                            <h3>3. Energy, Detox, and Focus</h3>
+                            <h3>3. Breakfast Is Essential</h3>
 
                             <p>
-                                Water helps your body remove waste and supports brain function.
-                                Staying hydrated improves concentration, energy levels and overall
-                                mental clarity during school and daily activities.
+                                Another wrong eating habit is skipping breakfast. Teenagers usually leave the house in a hurry in the morning and neglect to have breakfast. However, breakfast is the most important meal of the day and is necessary to meet the body's energy needs. Skipping breakfast can cause lack of concentration and low energy. Adopting healthy eating habits during adolescence will help young people lead a healthy life.
                             </p>
 
                         </div>
 
+                    </div>
+
+                    <div className="water-source-wrap">
+                        <a
+                            className="water-source-link"
+                            href={WATER_SOURCE_URL}
+                            target="_blank"
+                            rel="noreferrer"
+                        >
+                            Source
+                        </a>
                     </div>
 
                 </div>

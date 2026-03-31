@@ -150,7 +150,11 @@ export const womenStories = [
         title:"I Am Malala",
         author:"Malala Yousafzai",
         year:2013,
-        image:malala
+        image:malala,
+        annotation:[
+            "An exciting story about the life of a 16-year-old schoolgirl from the Swat Valley in Pakistan who challenged the Taliban and their ban on girls from attending schools.",
+
+        ]
     },
 
     {

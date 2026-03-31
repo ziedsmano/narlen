@@ -362,6 +362,139 @@ html{
     margin-bottom:60px;
 }
 
+.bio-kahoot-panel{
+    max-width:1200px;
+    margin:0 auto 56px;
+    padding:32px;
+    border-radius:28px;
+    background:
+        radial-gradient(circle at top right, rgba(106,191,138,0.22), transparent 34%),
+        linear-gradient(135deg, #ffffff, #edf8f0);
+    box-shadow:0 22px 48px rgba(0,0,0,0.08);
+    display:grid;
+    grid-template-columns:1.2fr .8fr;
+    gap:28px;
+    align-items:center;
+    text-align:left;
+}
+
+.bio-kahoot-copy{
+    animation:fadeUp 0.8s ease;
+}
+
+.bio-kahoot-badge{
+    display:inline-flex;
+    align-items:center;
+    padding:8px 14px;
+    border-radius:999px;
+    background:rgba(106,191,138,0.14);
+    color:#2f7d52;
+    font-size:13px;
+    font-weight:700;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+}
+
+.bio-kahoot-copy h3{
+    margin:16px 0 12px;
+    font-size:34px;
+    line-height:1.2;
+    color:#214c33;
+}
+
+.bio-kahoot-copy p{
+    margin:0;
+    font-size:17px;
+    line-height:1.7;
+    color:#4d6154;
+}
+
+.bio-kahoot-action-card{
+    position:relative;
+    padding:28px;
+    border-radius:24px;
+    background:rgba(255,255,255,0.82);
+    border:1px solid rgba(106,191,138,0.16);
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+    box-shadow:0 16px 34px rgba(79,174,117,0.14);
+    animation:fadeUp 1s ease;
+}
+
+.bio-kahoot-action-card::before{
+    content:"";
+    position:absolute;
+    inset:-1px;
+    border-radius:inherit;
+    padding:1px;
+    background:linear-gradient(135deg, rgba(106,191,138,0.4), rgba(255,255,255,0));
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite:xor;
+    mask-composite:exclude;
+    pointer-events:none;
+}
+
+.bio-kahoot-time{
+    width:max-content;
+    padding:10px 14px;
+    border-radius:16px;
+    background:#4fae75;
+    color:#fff;
+    font-weight:700;
+    box-shadow:0 10px 18px rgba(79,174,117,0.24);
+    animation:quizBadgeFloat 2.6s ease-in-out infinite;
+}
+
+.bio-kahoot-note{
+    margin:0;
+    font-size:15px;
+    line-height:1.6;
+    color:#4f6356;
+}
+
+.bio-kahoot-button{
+    width:max-content;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    min-height:48px;
+    padding:0 20px;
+    border-radius:999px;
+    background:#163321;
+    color:#fff;
+    text-decoration:none;
+    font-weight:700;
+    transition:transform .25s ease, box-shadow .25s ease, background .25s ease;
+}
+
+.bio-kahoot-button:hover{
+    transform:translateY(-3px);
+    box-shadow:0 14px 24px rgba(22, 51, 33, 0.22);
+    background:#214c33;
+}
+
+.bio-kahoot-button:focus-visible{
+    outline:3px solid rgba(106,191,138,0.28);
+    outline-offset:4px;
+}
+
+@keyframes quizBadgeFloat{
+    0%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-6px);
+    }
+
+    100%{
+        transform:translateY(0);
+    }
+}
+
 /* CARDS */
 
 .quiz-cards{
@@ -781,4 +914,209 @@ body[data-theme="dark"] .quiz-card textarea{
 body[data-theme="dark"] .quiz-card input::placeholder,
 body[data-theme="dark"] .quiz-card textarea::placeholder{
     color:#91a0bf;
+}
+
+body[data-theme="dark"] .bio-kahoot-panel,
+body[data-theme="dark"] .bio-kahoot-action-card{
+    background:rgba(28,39,56,0.94);
+    color:#f4f7ff;
+    box-shadow:0 18px 48px rgba(0,0,0,0.32);
+}
+
+body[data-theme="dark"] .bio-kahoot-badge{
+    background:rgba(106,191,138,0.18);
+    color:#9ddfba;
+}
+
+body[data-theme="dark"] .bio-kahoot-copy h3,
+body[data-theme="dark"] .bio-kahoot-copy p,
+body[data-theme="dark"] .bio-kahoot-note{
+    color:#bcc7df;
+}
+
+body[data-theme="dark"] .bio-kahoot-button{
+    background:#9ddfba;
+    color:#13202f;
+}
+
+@media (max-width: 960px){
+    .biology-page{
+        padding:0 20px 40px;
+    }
+
+    .bio-hero{
+        width:100%;
+        padding:32px 24px;
+        gap:20px;
+        flex-direction:column;
+        transform:translateY(120px);
+    }
+
+    .bio-hero-img{
+        width:min(100%, 380px);
+    }
+
+    .bio-videos{
+        padding:40px 0;
+        margin-top:140px;
+    }
+
+    .facts-grid{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .fact-card{
+        width:min(100%, 360px);
+    }
+
+    .fact-icon{
+        width:min(100%, 280px);
+    }
+
+    .bio-kahoot-panel{
+        grid-template-columns:1fr;
+        padding:24px;
+    }
+
+    .quiz-card{
+        width:min(100%, 520px);
+        padding:32px 24px;
+    }
+}
+
+@media (max-width:768px){
+    .biology-page{
+        padding:0 16px 32px;
+    }
+
+    .bio-top-bg{
+        width:100%;
+        height:220px;
+        left:auto;
+        transform:none;
+        margin-bottom:24px;
+    }
+
+    .bio-hero{
+        padding:24px 18px;
+        border-radius:20px;
+        transform:translateY(88px);
+    }
+
+    .bio-hero-text h1{
+        font-size:30px;
+    }
+
+    .bio-hero-text p,
+    .bio-videos p,
+    .bio-kahoot-copy p{
+        font-size:16px;
+    }
+
+    .bio-hero-text h1::after{
+        width:120px;
+    }
+
+    .bio-videos{
+        margin-top:108px;
+    }
+
+    .bio-videos h2,
+    .bio-facts h2,
+    .bio-quiz-section h1{
+        font-size:30px;
+    }
+
+    .bio-facts{
+        margin:72px auto;
+        padding:48px 18px;
+        border-radius:22px;
+    }
+
+    .bio-facts h2::after,
+    .quiz-header h1::after{
+        width:min(100%, 180px);
+    }
+
+    .facts-grid{
+        gap:20px;
+    }
+
+    .fact-card{
+        padding:24px 20px;
+    }
+
+    .bio-kahoot-copy h3{
+        font-size:28px;
+    }
+
+    .bio-kahoot-panel,
+    .bio-kahoot-action-card{
+        padding:22px 18px;
+        border-radius:22px;
+    }
+
+    .bio-kahoot-button{
+        width:100%;
+    }
+
+    .quiz-cards{
+        gap:24px;
+        margin-top:40px;
+    }
+
+    .quiz-card{
+        padding:24px 18px;
+    }
+
+    .quiz-title{
+        align-items:flex-start;
+    }
+
+    .quiz-header h3{
+        margin-bottom:36px;
+    }
+
+    .bio-decor{
+        display:none;
+    }
+}
+
+@media (max-width:480px){
+    .bio-top-bg{
+        height:180px;
+    }
+
+    .bio-hero{
+        transform:translateY(72px);
+    }
+
+    .bio-videos{
+        margin-top:88px;
+    }
+
+    .bio-videos,
+    .bio-quiz-section{
+        padding-left:0;
+        padding-right:0;
+    }
+
+    .video-card{
+        height:190px;
+    }
+
+    .video-title{
+        font-size:28px;
+        gap:10px;
+    }
+
+    .video-title::before,
+    .video-title::after{
+        max-width:60px;
+    }
+
+    .quiz-header h1{
+        font-size:28px;
+    }
 }

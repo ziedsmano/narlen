@@ -6,16 +6,21 @@ import { Navigation } from "swiper/modules"
 import "swiper/css"
 import "swiper/css/navigation"
 
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 import { internationalBooks, womenStories } from "../data/books"
 
 function RecommendedBooksModal({ isOpen, onClose }) {
 
-    const [selectedBook,setSelectedBook] = useState(null)
+    const [selectedBookTitle, setSelectedBookTitle] = useState(null)
 
-    if(!isOpen) return null
+    useEffect(() => {
+        if (!isOpen) {
+            setSelectedBookTitle(null)
+        }
+    }, [isOpen])
 
+    if (!isOpen) return null
 
     const handleMouseMove = (e) => {
 
@@ -36,29 +41,60 @@ function RecommendedBooksModal({ isOpen, onClose }) {
 
     }
 
-    const resetTilt = (e)=>{
+    const resetTilt = (e) => {
         e.currentTarget.style.transform =
             "rotateX(0) rotateY(0) scale(1)"
     }
 
+    const toggleAnnotation = (book) => {
+        if (!book.annotation) return
 
-    return(
+        setSelectedBookTitle((currentTitle) =>
+            currentTitle === book.title ? null : book.title
+        )
+    }
 
-        <div className="modal-overlay" onClick={onClose}>
+    const handleBookKeyDown = (event, book) => {
+        if (event.key === "Enter" || event.key === " ") {
+            event.preventDefault()
+            toggleAnnotation(book)
+        }
+    }
 
-            <div className="books-modal" onClick={(e)=>e.stopPropagation()}>
+    return (
 
-                <button className="close-btn" onClick={onClose}>✕</button>
+        <div
+            className="modal-overlay app-modal-overlay"
+            onClick={onClose}
+        >
 
-                <h2 className="modal-title">📚 Recommended Books</h2>
+            <div
+                className="books-modal app-modal-shell app-modal-content"
+                onClick={(e) => e.stopPropagation()}
+                role="dialog"
+                aria-modal="true"
+                aria-labelledby="recommended-books-title"
+                data-read-aloud-target="true"
+            >
 
-                {/* INTERNATIONAL */}
+                <button
+                    className="close-btn app-modal-close"
+                    onClick={onClose}
+                    aria-label="Close dialog"
+                    data-read-aloud-ignore="true"
+                >
+                    ×
+                </button>
+
+                <h2 id="recommended-books-title" className="modal-title">
+                    Recommended Books
+                </h2>
 
                 <h3 className="section-title">
                     International Women Writers
                 </h3>
 
-                <div className="slider-wrapper">
+                <div className="slider-wrapper" data-read-aloud-block="true">
 
                     <Swiper
                         modules={[Navigation]}
@@ -70,20 +106,36 @@ function RecommendedBooksModal({ isOpen, onClose }) {
                         className="book-slider"
                     >
 
-                        {internationalBooks.map((book,index)=>(
+                        {internationalBooks.map((book, index) => (
                             <SwiperSlide key={index}>
 
                                 <div
                                     className="book-card"
+                                    data-read-aloud-block="true"
                                     onMouseMove={handleMouseMove}
                                     onMouseLeave={resetTilt}
-                                    onClick={()=>setSelectedBook(book)}
+                                    onClick={() => toggleAnnotation(book)}
+                                    onKeyDown={(event) => handleBookKeyDown(event, book)}
+                                    role={book.annotation ? "button" : undefined}
+                                    tabIndex={book.annotation ? 0 : -1}
                                 >
 
-                                    <div
-                                        className="book-cover"
-                                        style={{backgroundImage:`url(${book.image})`}}
-                                    ></div>
+                                    <div className="book-cover-wrapper">
+                                        <div
+                                            className={`book-cover ${selectedBookTitle === book.title ? "book-cover-active" : ""}`}
+                                            style={{ backgroundImage: `url(${book.image})` }}
+                                        >
+                                            {book.annotation && (
+                                                <div
+                                                    className={`book-annotation ${selectedBookTitle === book.title ? "book-annotation-visible" : ""}`}
+                                                >
+                                                    {book.annotation.map((paragraph, annotationIndex) => (
+                                                        <p key={annotationIndex}>{paragraph}</p>
+                                                    ))}
+                                                </div>
+                                            )}
+                                        </div>
+                                    </div>
 
                                     <h4>{book.title}</h4>
 
@@ -99,16 +151,12 @@ function RecommendedBooksModal({ isOpen, onClose }) {
                     </Swiper>
 
                 </div>
-
-
-
-                {/* WOMEN STORIES */}
 
                 <h3 className="section-title">
                     Books About Women
                 </h3>
 
-                <div className="slider-wrapper">
+                <div className="slider-wrapper" data-read-aloud-block="true">
 
                     <Swiper
                         modules={[Navigation]}
@@ -120,20 +168,36 @@ function RecommendedBooksModal({ isOpen, onClose }) {
                         className="book-slider"
                     >
 
-                        {womenStories.map((book,index)=>(
+                        {womenStories.map((book, index) => (
                             <SwiperSlide key={index}>
 
                                 <div
                                     className="book-card"
+                                    data-read-aloud-block="true"
                                     onMouseMove={handleMouseMove}
                                     onMouseLeave={resetTilt}
-                                    onClick={()=>setSelectedBook(book)}
+                                    onClick={() => toggleAnnotation(book)}
+                                    onKeyDown={(event) => handleBookKeyDown(event, book)}
+                                    role={book.annotation ? "button" : undefined}
+                                    tabIndex={book.annotation ? 0 : -1}
                                 >
 
-                                    <div
-                                        className="book-cover"
-                                        style={{backgroundImage:`url(${book.image})`}}
-                                    ></div>
+                                    <div className="book-cover-wrapper">
+                                        <div
+                                            className={`book-cover ${selectedBookTitle === book.title ? "book-cover-active" : ""}`}
+                                            style={{ backgroundImage: `url(${book.image})` }}
+                                        >
+                                            {book.annotation && (
+                                                <div
+                                                    className={`book-annotation ${selectedBookTitle === book.title ? "book-annotation-visible" : ""}`}
+                                                >
+                                                    {book.annotation.map((paragraph, annotationIndex) => (
+                                                        <p key={annotationIndex}>{paragraph}</p>
+                                                    ))}
+                                                </div>
+                                            )}
+                                        </div>
+                                    </div>
 
                                     <h4>{book.title}</h4>
 
@@ -149,7 +213,6 @@ function RecommendedBooksModal({ isOpen, onClose }) {
                     </Swiper>
 
                 </div>
-
 
             </div>
 

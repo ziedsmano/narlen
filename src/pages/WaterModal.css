@@ -213,6 +213,36 @@
 
 }
 
+.water-source-link{
+
+    display:inline-flex;
+    align-items:center;
+
+    margin-top:14px;
+    padding:7px 12px;
+
+    border-radius:999px;
+
+    background:rgba(91,183,165,0.14);
+    border:1px solid rgba(91,183,165,0.34);
+
+    color:#177868;
+    text-decoration:none;
+    font-size:14px;
+    font-weight:600;
+
+}
+
+.water-source-wrap{
+    display:flex;
+    justify-content:center;
+    margin:8px auto 0;
+}
+
+.water-source-link:hover{
+    background:rgba(91,183,165,0.22);
+}
+
 
 /* SCROLLBAR */
 
@@ -306,4 +336,62 @@ body[data-theme="dark"] .water-card{
 
 body[data-theme="dark"] .water-text p{
     color:#d4ddf1;
+}
+
+body[data-theme="dark"] .water-source-link{
+    color:#d6fff7;
+    background:rgba(91,183,165,0.2);
+    border-color:rgba(129,225,206,0.35);
+}
+
+@media (max-width:768px){
+    .water-overlay{
+        align-items:flex-end;
+    }
+
+    .water-modal{
+        width:100%;
+        max-width:100%;
+        height:100dvh;
+        border-radius:22px 22px 0 0;
+    }
+
+    .water-container{
+        padding:56px 16px 24px;
+    }
+
+    .water-title{
+        font-size:28px;
+    }
+
+    .water-subtitle{
+        width:calc(100% + 32px);
+        margin-left:-16px;
+        padding:10px 16px;
+        margin-bottom:24px;
+    }
+
+    .water-card{
+        flex-direction:column;
+        padding:18px;
+        gap:16px;
+        text-align:center;
+    }
+
+    .water-card img{
+        width:100%;
+        max-width:280px;
+        height:auto;
+    }
+
+    .water-close{
+        top:14px;
+        right:14px;
+        width:40px;
+        height:40px;
+    }
+
+    .water-source-wrap{
+        margin-top:0;
+    }
 }

@@ -58,7 +58,9 @@
 
 .bio-left h1{
 
-    font-size:42px;
+    font-size:72px;
+    letter-spacing:0.08em;
+    line-height:0.95;
     margin:0;
 
 }
@@ -213,7 +215,7 @@
 
     overflow:hidden;
 
-    cursor:pointer;
+    cursor:default;
 
     background:white;
 
@@ -232,6 +234,10 @@
 
     box-shadow:0 20px 40px rgba(0,0,0,0.18);
 
+}
+
+.bio-card-link{
+    cursor:pointer;
 }
 
 
@@ -520,7 +526,7 @@
 
     .bio-left h1{
 
-        font-size:30px;
+        font-size:48px;
 
     }
 

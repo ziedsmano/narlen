@@ -12,6 +12,8 @@ import LiteraturePage from "./pages/LiteraturePage"
 import BiologyPage from "./pages/BiologyPage"
 import QuoteBar from "./components/QuoteBar"
 import InspiringSection from "./components/InspiringSection"
+import ReadAloudButton from "./components/ReadAloudButton"
+import ScrollToTop from "./components/ScrollToTop"
 import "./style.css"
 
 function App(){
@@ -39,39 +41,44 @@ function App(){
 
     return(
         <div className="app-shell">
+            <ScrollToTop/>
 
             <Navbar theme={theme} onToggleTheme={toggleTheme}/>
 
             <QuoteBar/>
 
-            <Routes>
+            <main id="main-content" className="app-main">
+                <ReadAloudButton/>
 
-                <Route path="/" element={
-                    <>
-                        <Hero/>
+                <Routes>
 
-                        <section className="page-section">
-                            <Subjects/>
-                        </section>
+                    <Route path="/" element={
+                        <>
+                            <Hero/>
 
-                        <section className="page-section">
-                            <Stats/>
-                        </section>
+                            <section className="page-section">
+                                <Subjects/>
+                            </section>
 
-                        <section className="page-section">
-                            <InspiringSection/>
-                        </section>
+                            <section className="page-section">
+                                <Stats/>
+                            </section>
 
-                    </>
-                }/>
+                            <section className="page-section">
+                                <InspiringSection/>
+                            </section>
 
-                <Route path="/history" element={<HistoryPage/>}/>
-                <Route path="/literature" element={<LiteraturePage/>}/>
-                <Route path="/biology" element={<BiologyPage/>}/>
-                <Route path="/inspiring" element={<InspiringPage/>}/>
-                <Route path="/feminism" element={<FeminismPage/>}/>
+                        </>
+                    }/>
 
-            </Routes>
+                    <Route path="/history" element={<HistoryPage/>}/>
+                    <Route path="/literature" element={<LiteraturePage/>}/>
+                    <Route path="/biology" element={<BiologyPage/>}/>
+                    <Route path="/inspiring" element={<InspiringPage/>}/>
+                    <Route path="/feminism" element={<FeminismPage/>}/>
+
+                </Routes>
+            </main>
 
             <Footer/>
 

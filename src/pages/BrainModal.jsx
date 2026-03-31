@@ -7,127 +7,132 @@ import neuro from "../images/brain-modal/brain-neuro.png"
 import emotions from "../images/brain-modal/brain-emotions.png"
 import sleep from "../images/brain-modal/brain-sleep.png"
 
+const BRAIN_SOURCE_URL = "https://www.hiwellapp.com/blog/ergenlikte-beyin"
+
 function BrainModal({ isOpen, onClose }) {
 
-    const [show,setShow] = useState(isOpen)
-    const [closing,setClosing] = useState(false)
+    const [show, setShow] = useState(isOpen)
+    const [closing, setClosing] = useState(false)
 
-    useEffect(()=>{
-        if(isOpen){
+    useEffect(() => {
+        if (isOpen) {
             setShow(true)
         }
-    },[isOpen])
+    }, [isOpen])
 
-    if(!show) return null
+    if (!show) return null
 
-    function handleClose(){
+    function handleClose() {
 
         setClosing(true)
 
-        setTimeout(()=>{
+        setTimeout(() => {
             setClosing(false)
             setShow(false)
             onClose()
-        },450)
+        }, 450)
 
     }
 
-    return(
+    return (
 
-        <div className={`brain-overlay ${closing ? "overlay-closing" : ""}`}>
+        <div className={`brain-overlay app-modal-overlay ${closing ? "overlay-closing" : ""}`}>
 
-            <div className={`brain-modal ${closing ? "modal-closing" : ""}`}>
+            <div
+                className={`brain-modal app-modal-shell ${closing ? "modal-closing" : ""}`}
+                role="dialog"
+                aria-modal="true"
+                aria-labelledby="brain-modal-title"
+            >
 
                 <button
-                    className="brain-close"
+                    className="brain-close app-modal-close"
                     onClick={handleClose}
+                    aria-label="Close dialog"
+                    data-read-aloud-ignore="true"
                 >
-                    ✕
+                    ×
                 </button>
 
                 <div
-                    className="brain-container"
-                    style={{ backgroundImage:`url(${bg})` }}
+                    className="brain-container app-modal-content app-modal-content--brain"
+                    data-read-aloud-target="true"
+                    style={{ backgroundImage: `url(${bg})` }}
                 >
 
-                    <h1 className="brain-title">
+                    <h1 id="brain-modal-title" className="brain-title">
                         Deep Dive: The Transforming Teenage Brain
                     </h1>
 
                     <p className="brain-subtitle">
-                        Explore how your brain builds unique connections during puberty,
-                        shaping who you become.
+                        Learn how puberty activates key brain systems and supports the development of thinking, emotions, and future goals.
                     </p>
 
-
-                    <div className="brain-card">
+                    <div className="brain-card" data-read-aloud-block="true">
 
                         <img src={neuro} alt="" />
 
                         <div className="brain-text">
 
                             <h3>
-                                1. The Big Brain Upgrade (Neuroplasticity)
+                                1. The hypothalamic-pituitary-gonadal axis
                             </h3>
 
-                            <p>
-                                During puberty your brain undergoes a powerful transformation.
-                                It forms thousands of new neural connections based on your
-                                experiences and learning.
+                            <p>The hypothalamic-pituitary-gonadal axis in the brain is active in the prenatal and postnatal periods, but is then suppressed by the inhibiting gamma-aminobutyric acid (GABA). </p>
+                            <p>In adolescence, this axis becomes active again and the production of sex hormones begins. The brain transmits messages in the form of hormones and tells the body to start puberty.</p>
 
-                                This process makes the brain more efficient and helps
-                                develop stronger thinking, creativity, and memory.
-                            </p>
 
                         </div>
 
                     </div>
 
-
-                    <div className="brain-card">
+                    <div className="brain-card" data-read-aloud-block="true">
 
                         <img src={emotions} alt="" />
 
                         <div className="brain-text">
 
                             <h3>
-                                2. Hormones and Emotional Waves
+                                2. How does the brain develop?
                             </h3>
 
                             <p>
-                                Hormones influence both the body and the brain.
-                                They interact with the emotional center of your brain,
-                                which is why mood changes are common during puberty.
-
-                                Learning to understand these emotions helps build
-                                emotional intelligence and resilience.
+                                Different hormones start to influence the brain in puberty. The development of the brain starts when the baby is in the womb of the mother and continues to develop after birth except the front part of the brain. The front part will start developing from the middle of childhood, and especially in puberty it develops very quickly. The brain develops from the back to the front.
                             </p>
+
+
 
                         </div>
 
                     </div>
 
-
-                    <div className="brain-card">
+                    <div className="brain-card" data-read-aloud-block="true">
 
                         <img src={sleep} alt="" />
 
                         <div className="brain-text">
 
                             <h3>
-                                3. Brain Health and Body Care
+                                3. What happens when the front brain develops?
                             </h3>
 
                             <p>
-                                Healthy habits support your brain’s development.
-
-                                Sleep strengthens memory and concentration,
-                                water helps brain activity, and nutritious food
-                                fuels brain growth and emotional balance.
+                                Teenagers start to think out of the box by exploring the world. As a result, in puberty teenagers are eager to share information about themselves, try new hobbies, or take social risks. They begin to think about their future goals. When teenagers have clear goals about their future, they can learn new information effectively because their brains are systems of emotional learning.
                             </p>
 
                         </div>
 
+                    </div>
+
+                    <div className="brain-source-wrap">
+                        <a
+                            className="brain-source-link"
+                            href={BRAIN_SOURCE_URL}
+                            target="_blank"
+                            rel="noreferrer"
+                        >
+                            Source
+                        </a>
                     </div>
 
                 </div>

@@ -16,12 +16,9 @@ import thatcher from "../images/women/thatcher.jpg"
 
 import greta from "../images/women/greta.jpg"
 import maathai from "../images/women/maathai.jpg"
-import angelou from "../images/women/angelou.jpg"
 import okeeffe from "../images/women/okeeffe.jpg"
 import gandhi from "../images/women/gandhi.jpg"
 import goodall from "../images/women/goodall.jpg"
-
-import Footer from "../components/Footer"
 
 
 
@@ -29,133 +26,136 @@ const women = [
 
     {
         name:"Marie Curie",
-        info:"Discovered radioactivity",
+        info:"The first female and the only person awarded Nobel Prizes in two different sciences — Physics and Chemistry. She pioneered research on the radioactive elements radium and polonium in France in 1898.",
         img:marie,
         category:"Science",
         region:"Europe",
-        period:"1900s"
+        period:"1900s",
+        link:"https://www.britannica.com/biography/Marie-Curie"
     },
 
     {
         name:"Malala Yousafzai",
-        info:"Youngest Nobel Prize winner",
+        info:"The youngest ever Nobel Peace Prize winner, who has become a global symbol of resistance to the Taliban's restrictions on girls' education.",
         img:malala,
         category:"Activism",
         region:"Asia",
-        period:"2000s"
+        period:"2000s",
+        link:"https://www.britannica.com/biography/Malala-Yousafzai"
     },
 
     {
         name:"Rosa Parks",
-        info:"Civil rights movement symbol",
+        info:"A catalyst for the modern civil rights movement in the United States after refusing to surrender her seat on a bus to a white passenger in Montgomery. She became a symbol of dignity and resistance to racial segregation.",
         img:parks,
         category:"Activism",
         region:"America",
-        period:"1900s"
+        period:"1900s",
+        link:"https://www.history.com/topics/black-history/rosa-parks"
     },
 
     {
         name:"Frida Kahlo",
-        info:"Icon of Mexican art",
+        info:"A symbol of Mexican culture and feminine power, after her striking self-portraits and symbolic explorations of identity, pain and resilience in the 1930s-1940s.",
         img:frida,
         category:"Art",
         region:"America",
-        period:"1900s"
+        period:"1900s",
+        link:"https://www.britannica.com/biography/Frida-Kahlo"
     },
 
     {
         name:"Cleopatra",
-        info:"Last queen of Egypt",
+        info:"Rome's most powerful leader, known for her political prowess, intelligence, and influence. She was the last active ruler of Egypt from the Ptolemaic dynasty and played a crucial role in the transition from the Roman Republic to the Roman Empire.",
         img:cleopatra,
         category:"Politics",
         region:"Africa",
-        period:"Ancient"
+        period:"Ancient",
+        link:"https://www.britannica.com/biography/Cleopatra-queen-of-Egypt"
     },
 
     {
         name:"Ada Lovelace",
-        info:"First computer programmer",
+        info:"The world's first computer programmer who wrote the first algorithms on Charles Babbage's analytical engine.",
         img:lovelace,
         category:"Science",
         region:"Europe",
-        period:"1800s"
+        period:"1800s",
+        link:"https://www.britannica.com/biography/Ada-Lovelace"
     },
 
     {
         name:"Joan of Arc",
-        info:"Heroine of France",
+        info:"The national heroine of France, one of the commanders of the French troops in the Hundred Years' War. Her leadership helped turn the tide of the Hundred Years' War.",
         img:joan,
         category:"Politics",
         region:"Europe",
-        period:"Middle Ages"
+        period:"Middle Ages",
+        link:"https://www.britannica.com/biography/Saint-Joan-of-Arc"
     },
 
     {
         name:"Hypatia",
-        info:"Ancient mathematician",
+        info:"Known as one of the earliest female scientists for significant contributions to mathematics and philosophy.",
         img:hypatia,
         category:"Science",
         region:"Africa",
-        period:"Ancient"
+        period:"Ancient",
+        link:"https://www.britannica.com/biography/Hypatia"
     },
 
     {
         name:"Margaret Thatcher",
-        info:"First female Prime Minister of the UK",
+        info:"Known as the \"Iron Lady,\" she became the first woman to hold the office and the longest-serving British premier of the 20th century.",
         img:thatcher,
         category:"Politics",
         region:"Europe",
-        period:"1900s"
+        period:"1900s",
+        link:"https://www.britannica.com/biography/Margaret-Thatcher"
     },
 
     {
         name:"Angela Merkel",
-        info:"German Chancellor",
+        info:"The country's first female chancellor widely recognized for her pragmatic, steady leadership and central role in shaping European and global politics.",
         img:merkel,
         category:"Politics",
         region:"Europe",
-        period:"2000s"
+        period:"2000s",
+        link:"https://www.britannica.com/biography/Angela-Merkel"
     },
 
     {
         name:"Greta Thunberg",
-        info:"Climate activist",
+        info:"One of the Swedish environmental activists who organized the youth protest, which later brought climate change issues to the forefront of international politics and public awareness.",
         img:greta,
         category:"Activism",
         region:"Europe",
-        period:"2000s"
+        period:"2000s",
+        link:"https://www.britannica.com/biography/Greta-Thunberg"
     },
 
     {
         name:"Wangari Maathai",
-        info:"Environmental activist and Nobel laureate",
+        info:"Founder of the Green Belt movement and the first African woman to receive the Nobel Peace Prize. Tens of millions of trees were planted on her initiative.",
         img:maathai,
         category:"Activism",
         region:"Africa",
-        period:"2000s"
+        period:"2000s",
+        link:"https://www.nobelprize.org/prizes/peace/2004/maathai/facts/"
     },
 
     {
         name:"Georgia O'Keeffe",
-        info:"American modernist artist",
+        info:"\"The mother of American Modernism\" for developing a distinctive visual language that combined abstraction and realism. Her works changed the art of the 20th century.",
         img:okeeffe,
         category:"Art",
         region:"America",
         period:"1900s"
     },
 
-    {
-        name:"Maya Angelou",
-        info:"Famous poet and author",
-        img:angelou,
-        category:"Art",
-        region:"America",
-        period:"1900s"
-    },
-
-    {
+        {
         name:"Indira Gandhi",
-        info:"First female Prime Minister of India",
+        info:"Indian stateswoman, the first and only woman to hold the post of Prime Minister of India so far. She brought victory to India in the Indo-Pakistani war of 1971, thereby consolidating her status as a decisive leader.",
         img:gandhi,
         category:"Politics",
         region:"Asia",
@@ -164,11 +164,12 @@ const women = [
 
     {
         name:"Jane Goodall",
-        info:"Scientist famous for chimpanzee research",
+        info:"Pioneered research on wild chimpanzees in Gombe Stream, Tanzania in the 1960s. It changed the understanding of animal behavior and human attitudes towards nature.",
         img:goodall,
         category:"Science",
         region:"Europe",
-        period:"1900s"
+        period:"1900s",
+        link:"https://www.nationalgeographic.com/science/article/jane-goodall"
     }
 
 ]
@@ -234,6 +235,12 @@ function InspiringPage(){
 
     }
 
+    const openWomanSource = (link) => {
+        if(link){
+            window.open(link, "_blank", "noopener,noreferrer")
+        }
+    }
+
 
 
     return(
@@ -249,15 +256,15 @@ function InspiringPage(){
 
                         <div className="bio-left">
 
-                            <h1>Biographies</h1>
-                            <p>Every woman has a story.</p>
+                            <h1>EVERY</h1>
+                            <p>Woman has a history</p>
 
                         </div>
 
                         <div className="bio-quote">
 
                             "The purpose of a storyteller is not to tell you how to think,
-                            but to give you questions to think upon."
+                            but to give you questions to think upon." - Brandon Sanderson
 
                         </div>
 
@@ -320,9 +327,18 @@ function InspiringPage(){
                 {currentWomen.map((woman,index)=>(
 
                     <div
-                        className="bio-card"
+                        className={`bio-card ${woman.link ? "bio-card-link" : ""}`}
                         key={woman.name + page}
                         style={{animationDelay: `${index * 0.1}s`}}
+                        onClick={() => openWomanSource(woman.link)}
+                        onKeyDown={(event) => {
+                            if((event.key === "Enter" || event.key === " ") && woman.link){
+                                event.preventDefault()
+                                openWomanSource(woman.link)
+                            }
+                        }}
+                        role={woman.link ? "link" : undefined}
+                        tabIndex={woman.link ? 0 : -1}
                     >
 
                         <img src={woman.img} alt={woman.name}/>
