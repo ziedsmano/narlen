@@ -21,6 +21,10 @@
     --button-press-scale:0.96;
 }
 
+html{
+    overflow-x:clip;
+}
+
 body[data-theme="dark"]{
     --bg-primary:#0f1220;
     --bg-secondary:#171c31;
@@ -59,6 +63,20 @@ body{
 img{
     max-width:100%;
     height:auto;
+}
+
+#root,
+.app-shell{
+    width:100%;
+    overflow-x:clip;
+}
+
+.app-shell *{
+    min-width:0;
+}
+
+.app-shell :is(h1, h2, h3, h4, p, a, button, summary, span){
+    overflow-wrap:anywhere;
 }
 
 /* NAVBAR */
@@ -1410,25 +1428,25 @@ body[data-theme="dark"] .page-section{
 
 @media (max-width:768px){
     .navbar{
-        flex-direction:row;
-        align-items:center;
+        flex-direction:column;
+        align-items:stretch;
         gap:16px;
         padding:16px 20px;
-        overflow-x:auto;
+        overflow-x:clip;
     }
 
     .logo{
-        text-align:left;
+        text-align:center;
         flex:0 0 auto;
     }
 
     .menu{
-        width:auto;
-        min-width:max-content;
-        justify-content:flex-start;
+        width:100%;
+        min-width:0;
+        justify-content:center;
         gap:8px;
-        flex-wrap:nowrap;
-        overflow-x:visible;
+        flex-wrap:wrap;
+        overflow-x:clip;
     }
 
     .menu a{
@@ -1439,6 +1457,12 @@ body[data-theme="dark"] .page-section{
 
     .quote-bar{
         padding:16px 18px;
+    }
+
+    .quote-inner{
+        flex-direction:column;
+        gap:10px;
+        text-align:center;
     }
 
     .quote-text{
@@ -1572,6 +1596,11 @@ body[data-theme="dark"] .page-section{
 }
 
 @media (max-width:520px){
+    .navbar{
+        padding:14px 16px;
+        gap:12px;
+    }
+
     .language-switcher{
         justify-content:center;
         flex:0 0 auto;
@@ -1582,6 +1611,10 @@ body[data-theme="dark"] .page-section{
         justify-content:center;
         flex:0 0 auto;
         padding:8px 10px;
+        gap:6px;
+    }
+
+    .menu{
         gap:6px;
     }
 

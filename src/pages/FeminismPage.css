@@ -55,6 +55,7 @@
     border-radius:40px;
 
     box-shadow:0 40px 120px rgba(0,0,0,0.08);
+    overflow:hidden;
 }
 
 .history-sources{
@@ -278,6 +279,7 @@
     transition:
             transform 0.45s cubic-bezier(0.22,1,0.36,1),
             box-shadow 0.45s ease;
+    overflow-wrap:anywhere;
 }
 
 .timeline-card:hover{
@@ -1350,9 +1352,12 @@ body[data-theme="dark"] .today-card{
     }
 
     .timeline-wrapper{
-        padding:20px 14px;
-        border-radius:24px;
+        padding:16px 12px;
+        border-radius:28px;
         width:calc(100% - 24px);
+        background:
+            linear-gradient(180deg, rgba(255,255,255,0.94), rgba(248,243,255,0.98));
+        box-shadow:0 22px 48px rgba(88, 68, 182, 0.14);
     }
 
     .history-sources{
@@ -1369,13 +1374,19 @@ body[data-theme="dark"] .today-card{
     }
 
     .timeline{
-        padding:40px 0 16px;
-        border-radius:24px;
+        padding:28px 0 12px;
+        border-radius:22px;
+        background:
+            radial-gradient(circle at top left, rgba(123,92,250,0.18), transparent 34%),
+            linear-gradient(180deg, #efe6ff 0%, #e8dcff 100%);
     }
 
     .timeline-line{
         left:28px;
         height:100%;
+        width:5px;
+        background:linear-gradient(180deg, #7b5cfa 0%, #a48dff 100%);
+        box-shadow:0 0 0 6px rgba(123,92,250,0.09);
     }
 
     .timeline-row:first-child{
@@ -1384,19 +1395,21 @@ body[data-theme="dark"] .today-card{
 
     .timeline-row{
         height:auto;
-        min-height:210px;
+        min-height:176px;
         justify-content:flex-start;
-        padding:56px 12px 0 64px;
+        padding:48px 10px 10px 64px;
     }
 
     .timeline-year{
         left:28px;
         top:10px;
         transform:translate(-50%, 0);
-        font-size:12px;
-        padding:10px 14px;
-        max-width:180px;
+        font-size:11px;
+        padding:8px 12px;
+        max-width:150px;
         text-align:center;
+        border-radius:16px;
+        box-shadow:0 10px 22px rgba(91, 72, 188, 0.26);
     }
 
     .timeline-year::before,
@@ -1417,11 +1430,27 @@ body[data-theme="dark"] .today-card{
     }
 
     .timeline-card{
-        padding:22px 18px;
+        padding:18px 16px;
+        border-radius:18px;
+        box-shadow:0 16px 32px rgba(88, 68, 182, 0.14);
+        border:1px solid rgba(123,92,250,0.12);
     }
 
     .timeline-card:hover{
         transform:translateY(-6px);
+    }
+
+    .timeline-card h3{
+        margin:0 0 8px;
+        font-size:21px;
+        color:#44338f;
+    }
+
+    .timeline-card p{
+        margin:0;
+        font-size:14px;
+        line-height:1.55;
+        color:#5a5478;
     }
 
     .modal{
@@ -1505,18 +1534,19 @@ body[data-theme="dark"] .today-card{
     }
 
     .feminism-today{
-        margin-top:80px;
-        padding:80px 20px 96px;
+        margin-top:56px;
+        padding:52px 16px 64px;
         min-height:auto;
+        background-position:center;
     }
 
     .feminism-today h2{
-        font-size:32px;
-        margin-bottom:36px;
+        font-size:28px;
+        margin-bottom:24px;
     }
 
     .today-grid{
-        gap:20px;
+        gap:14px;
     }
 
     .today-grid::before,
@@ -1527,11 +1557,23 @@ body[data-theme="dark"] .today-card{
     .today-card{
         width:100%;
         min-height:auto;
-        padding:28px 22px;
+        padding:20px 18px;
+        border-radius:20px;
+        backdrop-filter:blur(10px);
+    }
+
+    .today-card h3,
+    .today-card p{
+        text-align:left;
     }
 }
 
 @media (max-width:480px){
+    .title{
+        font-size:34px;
+        margin-bottom:56px;
+    }
+
     .hero-content h1{
         font-size:34px;
     }
@@ -1541,7 +1583,7 @@ body[data-theme="dark"] .today-card{
     }
 
     .timeline-row{
-        padding-left:56px;
+        padding-left:52px;
         padding-right:8px;
     }
 
@@ -1551,9 +1593,21 @@ body[data-theme="dark"] .today-card{
     }
 
     .timeline-year{
-        max-width:140px;
+        max-width:118px;
         font-size:11px;
-        padding:8px 10px;
+        padding:7px 8px;
+    }
+
+    .timeline-card{
+        padding:16px 14px;
+    }
+
+    .timeline-card h3{
+        font-size:18px;
+    }
+
+    .timeline-card p{
+        font-size:13px;
     }
 
     .modal-text{
@@ -1568,5 +1622,39 @@ body[data-theme="dark"] .today-card{
 
     .modal-text-scroll{
         max-height:52dvh;
+    }
+
+    .modal-quote,
+    .modal-highlight{
+        font-size:15px;
+    }
+
+    .feminism-today{
+        margin-top:44px;
+        padding:44px 12px 56px;
+    }
+
+    .feminism-today h2{
+        font-size:24px;
+        margin-bottom:18px;
+    }
+
+    .today-card{
+        padding:18px 16px;
+    }
+
+    .today-icon{
+        font-size:34px;
+        margin-bottom:12px;
+    }
+
+    .today-card h3{
+        font-size:18px;
+        margin-bottom:8px;
+    }
+
+    .today-card p{
+        font-size:13px;
+        line-height:1.5;
     }
 }

@@ -505,6 +505,26 @@
 /* MOBILE */
 
 @media(max-width:600px){
+    .hero-background{
+        height:320px;
+        background-size:cover;
+        background-position:center 24%;
+        background-repeat:no-repeat;
+        align-items:flex-end;
+    }
+
+    .content-container{
+        padding:0 16px;
+    }
+
+    .bio-hero{
+        width:100%;
+        padding:24px 18px;
+        transform:translateY(72px);
+        border-radius:18px;
+        background:rgba(255,255,255,0.95);
+        box-shadow:0 18px 40px rgba(0,0,0,0.14);
+    }
 
     .bio-grid{
 
@@ -514,13 +534,20 @@
 
     .bio-page{
 
-        padding:30px 20px;
+        padding:0 0 30px;
 
     }
 
     .bio-filter{
 
         flex-wrap:wrap;
+        margin:140px auto 40px;
+        padding:0 16px;
+    }
+
+    .bio-filter select,
+    .bio-filter button{
+        width:100%;
 
     }
 
@@ -530,6 +557,47 @@
 
     }
 
+    .bio-quote{
+        max-width:none;
+        font-size:15px;
+    }
+
+    .pagination{
+        flex-wrap:wrap;
+        padding:0 16px;
+    }
+
+}
+
+@media(max-width:480px){
+    .hero-background{
+        height:288px;
+        background-size:cover;
+        background-position:center 20%;
+    }
+
+    .bio-hero{
+        padding:22px 16px;
+        transform:translateY(60px);
+        border-radius:16px;
+    }
+
+    .bio-left h1{
+        font-size:42px;
+    }
+
+    .bio-left p{
+        font-size:14px;
+    }
+
+    .bio-quote{
+        font-size:14px;
+        line-height:1.5;
+    }
+
+    .bio-filter{
+        margin:116px auto 36px;
+    }
 }
 
 

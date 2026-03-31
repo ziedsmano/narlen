@@ -14,7 +14,7 @@ html{
 .biology-page{
     min-height:100vh;
     position:relative;
-    overflow:hidden;
+    overflow-x:clip;
     padding:0 60px 60px 60px;
 
     background:linear-gradient(
@@ -987,25 +987,43 @@ body[data-theme="dark"] .bio-kahoot-button{
 
 @media (max-width:768px){
     .biology-page{
-        padding:0 16px 32px;
+        padding:24px 0 32px;
     }
 
     .bio-top-bg{
         width:100%;
-        height:220px;
-        left:auto;
+        height:300px;
+        min-height:300px;
+        left:0;
         transform:none;
-        margin-bottom:24px;
+        margin-bottom:128px;
+        padding-top:0;
+        background-image:url("../images/big-bio.jpg");
+        background-size:cover;
+        background-position:center 32%;
+        background-repeat:no-repeat;
+        display:flex;
+        align-items:flex-end;
+        justify-content:center;
     }
 
     .bio-hero{
-        padding:24px 18px;
-        border-radius:20px;
-        transform:translateY(88px);
+        width:calc(100% - 32px);
+        padding:28px 20px 24px;
+        border-radius:24px;
+        transform:translateY(112px);
+        gap:20px;
+        text-align:center;
+        box-shadow:0 18px 40px rgba(0,0,0,0.12);
+    }
+
+    .bio-hero-text{
+        max-width:none;
     }
 
     .bio-hero-text h1{
         font-size:30px;
+        margin-bottom:14px;
     }
 
     .bio-hero-text p,
@@ -1016,12 +1034,18 @@ body[data-theme="dark"] .bio-kahoot-button{
 
     .bio-hero-text h1::after{
         width:120px;
+        margin-left:auto;
+        margin-right:auto;
+    }
+
+    .bio-hero-img{
+        width:min(100%, 260px);
     }
 
     .bio-videos{
-        margin-top:108px;
-        padding-left:0;
-        padding-right:0;
+        margin-top:0;
+        padding-left:16px;
+        padding-right:16px;
     }
 
     .bio-videos h2,
@@ -1086,7 +1110,7 @@ body[data-theme="dark"] .bio-kahoot-button{
 
     .quiz-cards{
         display:grid;
-        grid-template-columns:repeat(2, minmax(0, 1fr));
+        grid-template-columns:minmax(0, 1fr);
         gap:16px;
         margin-top:40px;
         align-items:start;
@@ -1133,19 +1157,40 @@ body[data-theme="dark"] .bio-kahoot-button{
     .quiz-card textarea{
         padding:12px;
     }
+
+    .quiz-btn{
+        width:100%;
+    }
+}
+
+@media (max-width:640px){
+    .biology-page .video-grid{
+        grid-template-columns:minmax(0, 1fr);
+        max-width:360px;
+    }
+
+    .biology-page .video-card,
+    .biology-page .video-card:nth-child(3){
+        grid-column:auto;
+        width:100%;
+        justify-self:stretch;
+    }
+
+    .bio-kahoot-copy h3{
+        font-size:24px;
+    }
 }
 
 @media (max-width:480px){
+    .biology-page{
+        padding-top:20px;
+    }
+
     .bio-top-bg{
-        height:180px;
-    }
-
-    .bio-hero{
-        transform:translateY(72px);
-    }
-
-    .bio-videos{
-        margin-top:88px;
+        height:268px;
+        min-height:268px;
+        margin-bottom:112px;
+        background-position:center 30%;
     }
 
     .biology-page .video-card{
@@ -1164,5 +1209,24 @@ body[data-theme="dark"] .bio-kahoot-button{
 
     .quiz-header h1{
         font-size:28px;
+    }
+
+    .bio-hero{
+        padding:22px 16px;
+        border-radius:20px;
+        width:calc(100% - 24px);
+        transform:translateY(96px);
+    }
+
+    .bio-hero-text h1{
+        font-size:26px;
+    }
+
+    .bio-hero-text p{
+        font-size:15px;
+    }
+
+    .bio-facts{
+        padding:40px 16px;
     }
 }

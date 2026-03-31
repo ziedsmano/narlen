@@ -10,7 +10,7 @@
 /* HERO */
 .literature-hero-section{
 
-    width:100vw;
+    width:100%;
 
     display:flex;
     justify-content:center;
@@ -21,8 +21,8 @@
 
     position:relative;
 
-    left:50%;
-    transform:translateX(-50%);
+    left:auto;
+    transform:none;
 }
 
 
@@ -495,6 +495,15 @@ body[data-theme="dark"] .video-card{
         grid-template-columns:repeat(2, minmax(0, 1fr));
         gap:24px;
     }
+
+    .literature-page .videos h2::before,
+    .literature-page .videos h2::after{
+        width:120px;
+    }
+
+    .literature-page .videos::after{
+        width:min(90%, 640px);
+    }
 }
 
 @media (max-width:768px){
@@ -612,6 +621,34 @@ body[data-theme="dark"] .video-card{
     }
 }
 
+@media (max-width:640px){
+    .literature-hero{
+        grid-template-columns:minmax(0, 1fr);
+        text-align:center;
+    }
+
+    .literature-page .hero-img{
+        width:min(100%, 240px);
+        justify-self:center;
+    }
+
+    .books-btn{
+        width:100%;
+    }
+
+    .literature-page .video-grid{
+        grid-template-columns:minmax(0, 1fr);
+        max-width:360px;
+    }
+
+    .literature-page .video-card,
+    .literature-page .video-card:nth-child(3){
+        grid-column:auto;
+        width:100%;
+        justify-self:stretch;
+    }
+}
+
 @media (max-width:480px){
     .literature-hero-container{
         padding:28px 16px;
@@ -627,6 +664,10 @@ body[data-theme="dark"] .video-card{
 
     .writers{
         padding:0 16px 48px;
+    }
+
+    .literature-page .videos{
+        padding:28px 16px 64px;
     }
 }
 
