@@ -207,6 +207,16 @@
 
 }
 
+.women-card > div{
+    flex:1;
+    min-width:0;
+}
+
+.women-card h3,
+.women-card p{
+    word-break:break-word;
+}
+
 .women-card-link:hover .women-card,
 .women-card-link:focus-visible .women-card{
 
@@ -277,4 +287,49 @@ body[data-theme="dark"] .women-modal{
 body[data-theme="dark"] .women-card{
     background:rgba(28,35,57,0.88);
     color:#f4f7ff;
+}
+
+@media (max-width:768px){
+    .women-overlay{
+        align-items:flex-end;
+        padding:0;
+    }
+
+    .women-modal{
+        width:100%;
+        max-width:none;
+        height:90vh;
+        border-radius:24px 24px 0 0;
+    }
+
+    .women-container{
+        padding:56px 16px 20px;
+    }
+
+    .women-title{
+        font-size:32px;
+        letter-spacing:1px;
+    }
+
+    .women-card{
+        gap:14px;
+        padding:14px;
+        margin-bottom:20px;
+    }
+
+    .women-card img{
+        width:110px;
+        height:140px;
+        flex-shrink:0;
+    }
+
+    .women-card h3{
+        font-size:18px;
+        margin:0 0 8px;
+    }
+
+    .women-card p{
+        font-size:14px;
+        line-height:1.45;
+    }
 }
