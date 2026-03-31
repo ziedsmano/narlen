@@ -1,6 +1,7 @@
 {
   "name": "nar-len",
   "version": "0.1.0",
+  "homepage": "https://ziedsmano.github.io/narlen",
   "private": true,
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
