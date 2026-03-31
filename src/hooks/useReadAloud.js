@@ -275,7 +275,11 @@ export function useReadAloud(rootSelector = "#main-content") {
                 return
             }
 
-            if (event.target.closest("[data-read-aloud-ignore]")) {
+            if (
+                event.target.closest(
+                    "[data-read-aloud-ignore], button, a, input, textarea, select, label, [role='button']"
+                )
+            ) {
                 return
             }
 

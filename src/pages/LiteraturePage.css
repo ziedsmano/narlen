@@ -53,17 +53,17 @@
 
 /* текст */
 
-.hero-text{
+.literature-page .hero-text{
     max-width:600px;
 }
 
-.hero-text h1{
+.literature-page .hero-text h1{
     font-size:64px;
     line-height:1.1;
     margin-bottom:20px;
 }
 
-.hero-text p{
+.literature-page .hero-text p{
     color:#666;
     margin-bottom:25px;
     font-size:18px;
@@ -118,7 +118,7 @@
 
 /* картинка */
 
-.hero-img{
+.literature-page .hero-img{
 
     width:800px;
     max-width:40%;
@@ -129,7 +129,7 @@
 }
 /* VIDEO */
 
-.videos h2{
+.literature-page .videos h2{
 
     display:inline-block;
 
@@ -145,8 +145,8 @@
 
 }
 
-.videos h2::before,
-.videos h2::after{
+.literature-page .videos h2::before,
+.literature-page .videos h2::after{
 
     content:"";
 
@@ -160,19 +160,19 @@
     background:#d9a441;
 }
 
-.videos h2::before{
+.literature-page .videos h2::before{
     right:100%;
     margin-right:20px;
 }
 
-.videos h2::after{
+.literature-page .videos h2::after{
     left:100%;
     margin-left:20px;
 }
 
 
 
-.videos{
+.literature-page .videos{
 
     text-align:center;
 
@@ -182,7 +182,7 @@
     padding-bottom:100px;
 
 }
-.videos::after{
+.literature-page .videos::after{
 
     content:"";
 
@@ -199,7 +199,7 @@
     background:#d9a441;
 
 }
-.video-grid{
+.literature-page .video-grid{
     display:flex;
     justify-content:center;
     gap:40px;
@@ -207,7 +207,7 @@
     flex-wrap:wrap;
 }
 
-.video-card{
+.literature-page .video-card{
     width:360px;
     height:200px;
 
@@ -219,12 +219,12 @@
     transition:transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.video-card:hover{
+.literature-page .video-card:hover{
     transform:translateY(-6px);
     box-shadow:0 20px 40px rgba(0,0,0,0.2);
 }
 
-.video-card iframe{
+.literature-page .video-card iframe{
     width:100%;
     height:100%;
     border:none;
@@ -478,11 +478,11 @@ body[data-theme="dark"] .video-card{
         gap:32px;
     }
 
-    .hero-text{
+    .literature-page .hero-text{
         max-width:none;
     }
 
-    .hero-img{
+    .literature-page .hero-img{
         width:min(100%, 320px);
         max-width:none;
     }
@@ -515,44 +515,72 @@ body[data-theme="dark"] .video-card{
         border-radius:24px;
     }
 
-    .hero-text h1{
-        font-size:38px;
+    .literature-hero{
+        display:grid;
+        grid-template-columns:minmax(0, 1fr) minmax(130px, 38%);
+        gap:18px;
+        text-align:left;
     }
 
-    .hero-text p{
+    .literature-page .hero-text h1{
+        font-size:32px;
+        margin-bottom:14px;
+    }
+
+    .literature-page .hero-text p{
         font-size:16px;
+        margin-bottom:18px;
     }
 
     .books-btn{
-        width:100%;
+        width:auto;
+        padding:12px 18px;
     }
 
-    .videos{
+    .literature-page .hero-img{
+        width:100%;
+        max-width:none;
+        justify-self:end;
+        align-self:center;
+    }
+
+    .literature-page .videos{
         padding:32px 20px 72px;
     }
 
-    .videos h2{
+    .literature-page .videos h2{
         font-size:26px;
     }
 
-    .videos h2::before,
-    .videos h2::after{
+    .literature-page .videos h2::before,
+    .literature-page .videos h2::after{
         display:none;
     }
 
-    .videos::after{
+    .literature-page .videos::after{
         width:min(88%, 320px);
         bottom:28px;
     }
 
-    .video-grid{
-        gap:20px;
+    .literature-page .video-grid{
+        display:grid;
+        grid-template-columns:repeat(2, minmax(0, 1fr));
+        gap:16px;
+        align-items:start;
+        max-width:760px;
+        margin:40px auto 0;
     }
 
-    .video-card{
+    .literature-page .video-card{
         width:100%;
-        max-width:420px;
-        height:220px;
+        max-width:none;
+        height:150px;
+    }
+
+    .literature-page .video-card:nth-child(3){
+        grid-column:1 / -1;
+        width:min(100%, 320px);
+        justify-self:center;
     }
 
     .writers{
@@ -589,12 +617,12 @@ body[data-theme="dark"] .video-card{
         padding:28px 16px;
     }
 
-    .hero-text h1{
-        font-size:32px;
+    .literature-page .hero-text h1{
+        font-size:28px;
     }
 
-    .video-card{
-        height:200px;
+    .literature-page .video-card{
+        height:130px;
     }
 
     .writers{

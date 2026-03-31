@@ -197,7 +197,7 @@ img{
     position:fixed;
     top:104px;
     right:8%;
-    z-index:1200;
+    z-index:900;
     display:flex;
     flex-direction:column;
     align-items:flex-end;
@@ -1410,31 +1410,31 @@ body[data-theme="dark"] .page-section{
 
 @media (max-width:768px){
     .navbar{
-        flex-direction:column;
-        align-items:stretch;
+        flex-direction:row;
+        align-items:center;
         gap:16px;
         padding:16px 20px;
+        overflow-x:auto;
     }
 
     .logo{
-        text-align:center;
+        text-align:left;
+        flex:0 0 auto;
     }
 
     .menu{
-        width:100%;
-        justify-content:center;
-        gap:10px;
+        width:auto;
+        min-width:max-content;
+        justify-content:flex-start;
+        gap:8px;
+        flex-wrap:nowrap;
+        overflow-x:visible;
     }
 
     .menu a{
         margin-left:0;
-        font-size:14px;
-        padding:8px 12px;
-    }
-
-    .language-switcher,
-    .theme-toggle{
-        width:auto;
+        font-size:12px;
+        padding:7px 10px;
     }
 
     .quote-bar{
@@ -1572,23 +1572,27 @@ body[data-theme="dark"] .page-section{
 }
 
 @media (max-width:520px){
-    .menu{
-        gap:8px;
-    }
-
-    .menu a{
-        font-size:13px;
-        padding:7px 10px;
-    }
-
     .language-switcher{
-        width:100%;
         justify-content:center;
+        flex:0 0 auto;
+        padding:3px;
     }
 
     .theme-toggle{
-        width:100%;
         justify-content:center;
+        flex:0 0 auto;
+        padding:8px 10px;
+        gap:6px;
+    }
+
+    .theme-toggle__text{
+        display:none;
+    }
+
+    .language-switcher__button{
+        min-width:36px;
+        padding:7px 8px;
+        font-size:11px;
     }
 
     .hero-text h1{
