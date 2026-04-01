@@ -11,15 +11,11 @@ function Footer() {
 
     return (
         <footer className="footer">
-
-            <p>
-                {copy[language]}
-            </p>
+            <p>{copy[language]}</p>
 
             <p className="footer-email">
                 narlen.project@gmail.com
             </p>
-
         </footer>
     )
 }

@@ -258,6 +258,10 @@
     transition:transform 0.35s ease, box-shadow 0.35s ease;
 }
 
+.writer-media{
+    position:relative;
+}
+
 .writer-card:hover{
     transform:translateY(-12px);
     box-shadow:0 20px 40px rgba(0,0,0,0.18);
@@ -273,6 +277,7 @@
     width:100%;
     height:380px;
     object-fit:cover;
+    object-position:center center;
 
     transition:transform 0.5s ease;
 }
@@ -299,9 +304,24 @@
     text-align:center;
 }
 
+.writer-info-header{
+    width:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.writer-info-body{
+    width:100%;
+}
+
+.writer-toggle{
+    display:none;
+}
+
 /* описание скрыто */
 
-.writer-info p{
+.writer-info-body p{
     opacity:0;
     max-height:0;
     transition:all 0.4s ease;
@@ -310,7 +330,7 @@
 /* hover */
 
 
-.writer-card:hover .writer-info p{
+.writer-card:hover .writer-info-body p{
     opacity:1;
     max-height:200px;
     margin-top:8px;
@@ -322,9 +342,30 @@
     font-weight:600;
 }
 
-.writer-info p{
+.writer-info-body p{
     font-size:14px;
     margin-top:6px;
+}
+
+.writer-info-body{
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:0;
+    background:rgba(0,0,0,0.45);
+    color:white;
+    padding:56px 18px 18px;
+    text-align:center;
+    opacity:0;
+    transform:translateY(24px);
+    pointer-events:none;
+    transition:opacity 0.35s ease, transform 0.35s ease;
+}
+
+.writer-card:hover .writer-info-body{
+    opacity:1;
+    transform:translateY(0);
+    pointer-events:auto;
 }
 
 .writer-source-link{
@@ -616,8 +657,199 @@ body[data-theme="dark"] .video-card{
         gap:20px;
     }
 
+    .writer-card{
+        background:#fff;
+        border-radius:20px;
+        overflow:visible;
+        box-shadow:0 14px 30px rgba(0,0,0,0.1);
+    }
+
+    .writer-media{
+        overflow:hidden;
+        border-radius:20px;
+    }
+
     .writer-card img{
-        height:320px;
+        height:272px;
+        object-position:center 14%;
+    }
+
+    .writer-card .writer-image--mistral{
+        object-position:center 16%;
+    }
+
+    .writer-card .writer-image--fariza{
+        object-position:center 16%;
+    }
+
+    .writer-card .writer-image--rowling{
+        object-position:center 16%;
+    }
+
+    .writer-card .writer-image--morrison{
+        object-position:center 15%;
+    }
+
+    .writer-card .writer-image--aitkhozina{
+        object-position:center 18%;
+    }
+
+    .writer-card .writer-image--christie{
+        object-position:center 16%;
+    }
+
+    .writer-card .writer-image--alexievich{
+        object-position:center 17%;
+    }
+
+    .writer-card .writer-image--shelley{
+        object-position:center 17%;
+    }
+
+    .writer-card .writer-image--sappho{
+        object-position:center 18%;
+    }
+
+    .writer-card .writer-image--sara{
+        object-position:center 18%;
+    }
+
+    .writer-card .writer-image--bronte{
+        object-position:center 18%;
+    }
+
+    .writer-card .writer-image--austen{
+        object-position:center 16%;
+    }
+
+    .writer-card .writer-image--atwood{
+        object-position:center 16%;
+    }
+
+    .writer-card .writer-image--beauvoir{
+        object-position:center 17%;
+    }
+
+    .writer-card .writer-image--nazipa{
+        object-position:center 17%;
+    }
+
+    .writer-card .writer-image--kanipa{
+        object-position:center 14%;
+    }
+
+    .writer-info{
+        position:absolute;
+        left:0;
+        right:0;
+        bottom:0;
+        width:100%;
+        align-items:stretch;
+        text-align:left;
+        background:linear-gradient(180deg, rgba(0,0,0,0), rgba(0,0,0,0.72) 62%, rgba(0,0,0,0.9));
+        color:#fff;
+        padding:34px 14px 12px;
+    }
+
+    .writer-info-header{
+        gap:10px;
+        justify-content:space-between;
+        align-items:flex-end;
+    }
+
+    .writer-info h3{
+        font-size:18px;
+        margin:0;
+    }
+
+    .writer-toggle{
+        display:inline-flex;
+        align-items:center;
+        justify-content:center;
+        flex-shrink:0;
+        border:none;
+        border-radius:999px;
+        padding:8px 12px;
+        background:rgba(255,255,255,0.18);
+        color:#fff;
+        font-size:11px;
+        font-weight:700;
+        letter-spacing:0.02em;
+        cursor:pointer;
+        backdrop-filter:blur(10px);
+    }
+
+    .writer-info-body{
+        display:none;
+        position:static;
+        margin-top:12px;
+        padding:16px;
+        border-radius:16px;
+        background:rgba(255,255,255,0.96);
+        color:#222;
+        box-shadow:0 10px 24px rgba(0,0,0,0.18);
+        text-align:left;
+        opacity:1;
+        transform:none;
+        pointer-events:auto;
+    }
+
+    .writer-card.is-expanded .writer-info-body{
+        display:block;
+    }
+
+    .writer-info-body p{
+        opacity:1;
+        max-height:none;
+        margin-top:0;
+        font-size:13px;
+        line-height:1.55;
+    }
+
+    .writer-info-body p + p{
+        margin-top:8px;
+    }
+
+    .writer-card:hover .writer-info-body p{
+        opacity:1;
+        max-height:none;
+        margin-top:0;
+    }
+
+    .writer-source-link{
+        margin-top:12px;
+        background:rgba(217,164,65,0.14);
+        border-color:rgba(217,164,65,0.3);
+        color:#9a6a17;
+    }
+
+    .writer-source-link:hover{
+        background:rgba(217,164,65,0.2);
+    }
+
+    body[data-theme="dark"] .writer-card{
+        background:#1c2339;
+    }
+
+    body[data-theme="dark"] .writer-info{
+        background:linear-gradient(180deg, rgba(8,10,18,0), rgba(8,10,18,0.72) 62%, rgba(8,10,18,0.9));
+        color:#f4f7ff;
+    }
+
+    body[data-theme="dark"] .writer-toggle{
+        background:rgba(255,255,255,0.14);
+        color:#f4f7ff;
+    }
+
+    body[data-theme="dark"] .writer-info-body{
+        background:rgba(28,35,57,0.96);
+        color:#f4f7ff;
+    }
+
+    body[data-theme="dark"] .writer-source-link{
+        background:rgba(217,164,65,0.16);
+        border-color:rgba(217,164,65,0.3);
+        color:#f3d48c;
     }
 }
 
@@ -664,6 +896,106 @@ body[data-theme="dark"] .video-card{
 
     .writers{
         padding:0 16px 48px;
+    }
+
+    .writers-container{
+        padding:22px 14px;
+    }
+
+    .writer-card{
+        border-radius:18px;
+    }
+
+    .writer-card img{
+        height:252px;
+        object-position:center 12%;
+    }
+
+    .writer-card .writer-image--mistral{
+        object-position:center 15%;
+    }
+
+    .writer-card .writer-image--fariza{
+        object-position:center 15%;
+    }
+
+    .writer-card .writer-image--rowling{
+        object-position:center 14%;
+    }
+
+    .writer-card .writer-image--morrison{
+        object-position:center 13%;
+    }
+
+    .writer-card .writer-image--aitkhozina{
+        object-position:center 16%;
+    }
+
+    .writer-card .writer-image--christie{
+        object-position:center 14%;
+    }
+
+    .writer-card .writer-image--alexievich{
+        object-position:center 15%;
+    }
+
+    .writer-card .writer-image--shelley{
+        object-position:center 15%;
+    }
+
+    .writer-card .writer-image--sappho{
+        object-position:center 16%;
+    }
+
+    .writer-card .writer-image--sara{
+        object-position:center 16%;
+    }
+
+    .writer-card .writer-image--bronte{
+        object-position:center 16%;
+    }
+
+    .writer-card .writer-image--austen{
+        object-position:center 14%;
+    }
+
+    .writer-card .writer-image--atwood{
+        object-position:center 14%;
+    }
+
+    .writer-card .writer-image--beauvoir{
+        object-position:center 15%;
+    }
+
+    .writer-card .writer-image--nazipa{
+        object-position:center 15%;
+    }
+
+    .writer-card .writer-image--kanipa{
+        object-position:center 12%;
+    }
+
+    .writer-info{
+        padding:30px 12px 12px;
+    }
+
+    .writer-info h3{
+        font-size:17px;
+    }
+
+    .writer-toggle{
+        padding:7px 10px;
+        font-size:11px;
+    }
+
+    .writer-info-body{
+        margin-top:10px;
+        padding:12px;
+    }
+
+    .writer-info p{
+        font-size:12px;
+        line-height:1.5;
     }
 
     .literature-page .videos{

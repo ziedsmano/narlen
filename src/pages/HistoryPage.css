@@ -4,6 +4,7 @@
     font-family:'Poppins',sans-serif;
     overflow-x:hidden;
     background:linear-gradient(180deg,#f6f3ff,#efe9ff);
+    animation:pageFade 0.8s ease;
 }
 
 
@@ -17,6 +18,9 @@
     gap:40px;
     max-width:1200px;
     margin:0 auto 60px auto;
+    opacity:0;
+    transform:translateY(28px);
+    animation:pageSectionFade 0.75s ease forwards;
 }
 
 
@@ -61,6 +65,9 @@
     gap:30px;
     max-width:1200px;
     margin:0 auto;
+    opacity:0;
+    transform:translateY(28px);
+    animation:pageSectionFade 0.75s ease 0.1s forwards;
 }
 
 .history-quiz-section{
@@ -76,6 +83,9 @@
     grid-template-columns:1.2fr .8fr;
     gap:28px;
     align-items:center;
+    opacity:0;
+    transform:translateY(28px);
+    animation:pageSectionFade 0.75s ease 0.2s forwards;
 }
 
 .history-quiz-eyebrow{
@@ -647,6 +657,28 @@ body[data-theme="dark"] .close-btn{
 }
 
 @keyframes heroFadeUp{
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+@keyframes pageFade{
+    from{
+        opacity:0;
+    }
+
+    to{
+        opacity:1;
+    }
+}
+
+@keyframes pageSectionFade{
+    from{
+        opacity:0;
+        transform:translateY(28px);
+    }
+
     to{
         opacity:1;
         transform:translateY(0);

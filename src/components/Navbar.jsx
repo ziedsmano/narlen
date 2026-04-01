@@ -1,53 +1,27 @@
 import { NavLink } from "react-router-dom"
 import { useLanguage } from "../context/LanguageContext"
+import ReadAloudButton from "./ReadAloudButton"
+import { getNavigationCopy, navItems } from "./navigationConfig"
 
 function Navbar({ theme, onToggleTheme }) {
     const { language, setLanguage, supportedLanguages } = useLanguage()
-
-    const copy = {
-        en: {
-            home: "Home",
-            history: "History",
-            literature: "Literature",
-            biology: "Biology",
-            themeLabel: theme === "dark" ? "Light mode" : "Dark mode",
-            themeText: theme === "dark" ? "Light" : "Dark"
-        },
-        ru: {
-            home: "Главная",
-            history: "История",
-            literature: "Литература",
-            biology: "Биология",
-            themeLabel: theme === "dark" ? "Светлая тема" : "Тёмная тема",
-            themeText: theme === "dark" ? "Светлая" : "Тёмная"
-        },
-        kz: {
-            home: "Басты бет",
-            history: "Тарих",
-            literature: "Әдебиет",
-            biology: "Биология",
-            themeLabel: theme === "dark" ? "Жарық режим" : "Қараңғы режим",
-            themeText: theme === "dark" ? "Жарық" : "Қараңғы"
-        }
-    }[language]
+    const copy = getNavigationCopy(language, theme)
 
     return (
         <div className="navbar">
-
             <div className="logo">
                 <NavLink to="/">NAR.LEN</NavLink>
             </div>
 
             <div className="menu">
+                {navItems.map((item) => (
+                    <NavLink key={item.to} to={item.to}>
+                        {copy[item.key]}
+                    </NavLink>
+                ))}
+            </div>
 
-                <NavLink to="/">{copy.home}</NavLink>
-
-                <NavLink to="/history">{copy.history}</NavLink>
-
-                <NavLink to="/literature">{copy.literature}</NavLink>
-
-                <NavLink to="/biology">{copy.biology}</NavLink>
-
+            <div className="navbar-controls">
                 <div className="language-switcher" aria-label="Language switcher">
                     {supportedLanguages.map((value) => (
                         <button
@@ -76,8 +50,8 @@ function Navbar({ theme, onToggleTheme }) {
                     </span>
                 </button>
 
+                <ReadAloudButton compact />
             </div>
-
         </div>
     )
 }

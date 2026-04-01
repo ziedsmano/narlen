@@ -10,30 +10,30 @@ const copy = {
         stop: "Stop",
         listenMode: "Listen Mode",
         unsupported: "Read aloud is unavailable in this browser.",
-        selecting: "Read aloud mode is on. Click any card, section, or modal text block.",
+        selecting: "Listen Mode is on. Click any card, section, or modal text block.",
         idle: "Turn on Listen Mode, then click the block you want to hear."
     },
     ru: {
-        stopLabel: "Остановить озвучивание",
-        startLabel: "Включить озвучивание",
+        stopLabel: "Остановить режим озвучивания",
+        startLabel: "Включить режим озвучивания",
         stop: "Стоп",
         listenMode: "Слушать",
         unsupported: "Озвучивание недоступно в этом браузере.",
-        selecting: "Режим озвучивания включён. Нажми на карточку, секцию или текст модального окна.",
+        selecting: "Режим озвучивания включён. Нажми на карточку, секцию или текстовый блок в модальном окне.",
         idle: "Включи режим прослушивания, затем нажми на блок, который хочешь услышать."
     },
     kz: {
-        stopLabel: "Дауыстап оқуды тоқтату",
+        stopLabel: "Дауыстап оқу режимін тоқтату",
         startLabel: "Дауыстап оқу режимін қосу",
         stop: "Тоқтату",
         listenMode: "Тыңдау",
         unsupported: "Бұл браузерде дауыстап оқу қолжетімсіз.",
-        selecting: "Дауыстап оқу режимі қосулы. Кез келген карта, бөлім немесе модаль мәтін блогын басыңыз.",
+        selecting: "Тыңдау режимі қосулы. Кез келген карта, бөлім немесе модаль мәтін блогын басыңыз.",
         idle: "Тыңдау режимін қосып, тыңдағыңыз келетін блокты басыңыз."
     }
 }
 
-function ReadAloudButton() {
+function ReadAloudButton({ compact = false }) {
     const location = useLocation()
     const { language } = useLanguage()
     const {
@@ -77,20 +77,23 @@ function ReadAloudButton() {
                 <span className="read-aloud__icon" aria-hidden="true">
                     {isSelecting || isSpeaking ? "\u25A0" : "\u{1F50A}"}
                 </span>
+
                 <span className="read-aloud__label">
                     {isSelecting || isSpeaking ? text.stop : text.listenMode}
                 </span>
             </button>
 
-            <p className="read-aloud__status" aria-live="polite">
-                {error || (
-                    !isSupported
-                        ? text.unsupported
-                        : isSelecting
-                            ? text.selecting
-                            : text.idle
-                )}
-            </p>
+            {!compact && (
+                <p className="read-aloud__status" aria-live="polite">
+                    {error || (
+                        !isSupported
+                            ? text.unsupported
+                            : isSelecting
+                                ? text.selecting
+                                : text.idle
+                    )}
+                </p>
+            )}
         </div>
     )
 }

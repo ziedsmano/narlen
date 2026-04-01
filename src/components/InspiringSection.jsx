@@ -5,18 +5,21 @@ import { useLanguage } from "../context/LanguageContext"
 const copy = {
     en: {
         title: "Inspiring Women\nMaking History",
-        description: "Let's discover the wonderful women who shaped our world and history.",
-        cta: "Read Stories"
+        description: "Discover remarkable women whose decisions, courage, and work changed the world.",
+        cta: "Read Stories",
+        imageAlt: "Women making history"
     },
     ru: {
         title: "Вдохновляющие женщины,\nкоторые творят историю",
-        description: "Давай узнаем о замечательных женщинах, которые изменили наш мир и историю.",
-        cta: "Читать истории"
+        description: "Познакомься с выдающимися женщинами, чьи решения, смелость и труд меняли мир.",
+        cta: "Читать истории",
+        imageAlt: "Женщины, меняющие историю"
     },
     kz: {
         title: "Тарих жасаған\nшабыт беретін әйелдер",
-        description: "Әлем мен тарихты өзгерткен тамаша әйелдермен танысайық.",
-        cta: "Оқиғаларды оқу"
+        description: "Әлемді өзгерткен ерекше әйелдердің батылдығы, еңбегі мен жолымен таныс.",
+        cta: "Оқиғаларды оқу",
+        imageAlt: "Тарих жасаған әйелдер"
     }
 }
 
@@ -26,9 +29,7 @@ function InspiringSection() {
 
     return (
         <section className="inspiring-section">
-
             <div className="inspiring-text">
-
                 <h2>{text.title.split("\n").map((part, index) => (
                     <span key={part}>
                         {part}
@@ -36,9 +37,7 @@ function InspiringSection() {
                     </span>
                 ))}</h2>
 
-                <p>
-                    {text.description}
-                </p>
+                <p>{text.description}</p>
 
                 <Link to="/inspiring" className="read-btn">
                     {text.cta}
@@ -46,11 +45,8 @@ function InspiringSection() {
             </div>
 
             <div className="inspiring-image">
-
-                <img src={women} alt="women" />
-
+                <img src={women} alt={text.imageAlt} />
             </div>
-
         </section>
     )
 }

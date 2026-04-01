@@ -298,38 +298,86 @@ body[data-theme="dark"] .women-card{
     .women-modal{
         width:100%;
         max-width:none;
-        height:90vh;
-        border-radius:24px 24px 0 0;
+        height:auto;
+        max-height:82dvh;
+        border-radius:22px 22px 0 0;
     }
 
     .women-container{
-        padding:56px 16px 20px;
+        padding:46px 12px 12px;
     }
 
     .women-title{
-        font-size:32px;
+        font-size:24px;
         letter-spacing:1px;
+        margin-bottom:12px;
     }
 
     .women-card{
-        gap:14px;
-        padding:14px;
-        margin-bottom:20px;
+        gap:10px;
+        padding:12px;
+        margin-bottom:10px;
+        border-radius:16px;
     }
 
     .women-card img{
-        width:110px;
-        height:140px;
+        width:92px;
+        height:116px;
         flex-shrink:0;
+        border-radius:10px;
     }
 
     .women-card h3{
-        font-size:18px;
-        margin:0 0 8px;
+        font-size:16px;
+        margin:0 0 6px;
     }
 
     .women-card p{
+        font-size:12px;
+        line-height:1.4;
+    }
+
+    .women-dedication,
+    .women-subtitle{
+        font-size:12px;
+        line-height:1.4;
+        margin-bottom:12px;
+    }
+}
+
+@media (max-width:480px){
+    .women-modal{
+        max-height:78dvh;
+    }
+
+    .women-container{
+        padding:40px 10px 10px;
+    }
+
+    .women-title{
+        font-size:21px;
+    }
+
+    .women-card{
+        gap:8px;
+        padding:10px;
+        margin-bottom:8px;
+        border-radius:14px;
+    }
+
+    .women-card img{
+        width:82px;
+        height:102px;
+    }
+
+    .women-card h3{
         font-size:14px;
-        line-height:1.45;
+    }
+
+    .women-card p,
+    .women-dedication,
+    .women-subtitle{
+        font-size:11px;
+        line-height:1.35;
     }
 }

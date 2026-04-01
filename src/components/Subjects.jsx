@@ -8,43 +8,58 @@ const copy = {
     en: {
         literature: {
             title: "Literature",
-            description: "Powerful female characters and inspiring stories."
+            description: "Powerful women writers, memorable heroines, and stories that stay with you."
         },
         history: {
             title: "History",
-            description: "The history of feminism and great women."
+            description: "The history of feminism, women's rights, and women who changed society."
         },
         biology: {
             title: "Biology",
-            description: "Puberty, menstruation and health education."
+            description: "Puberty, menstruation, sleep, nutrition, and caring for your health."
+        },
+        alt: {
+            books: "Books",
+            history: "History illustration",
+            biology: "Biology illustration"
         }
     },
     ru: {
         literature: {
             title: "Литература",
-            description: "Сильные женские героини и вдохновляющие истории."
+            description: "Сильные писательницы, яркие героини и истории, которые остаются в памяти."
         },
         history: {
             title: "История",
-            description: "История феминизма и великих женщин."
+            description: "История феминизма, прав женщин и женщин, которые меняли общество."
         },
         biology: {
             title: "Биология",
-            description: "Пубертат, менструация и забота о здоровье."
+            description: "Пубертат, менструация, сон, питание и забота о своём здоровье."
+        },
+        alt: {
+            books: "Книги",
+            history: "Иллюстрация по истории",
+            biology: "Иллюстрация по биологии"
         }
     },
     kz: {
         literature: {
             title: "Әдебиет",
-            description: "Күшті әйел кейіпкерлері мен шабыт беретін оқиғалар."
+            description: "Күшті жазушы әйелдер, есте қалатын кейіпкерлер және шабыт беретін оқиғалар."
         },
         history: {
             title: "Тарих",
-            description: "Феминизм тарихы және ұлы әйелдер."
+            description: "Феминизм тарихы, әйелдер құқықтары және қоғамды өзгерткен әйелдер."
         },
         biology: {
             title: "Биология",
-            description: "Жыныстық жетілу, етеккір және денсаулық туралы білім."
+            description: "Жыныстық жетілу, етеккір, ұйқы, тамақтану және денсаулыққа күтім."
+        },
+        alt: {
+            books: "Кітаптар",
+            history: "Тарих иллюстрациясы",
+            biology: "Биология иллюстрациясы"
         }
     }
 }
@@ -55,43 +70,23 @@ function Subjects() {
 
     return (
         <section className="subjects">
-
             <Link to="/literature" className="card">
-
-                <img src={books} alt="books" />
-
+                <img src={books} alt={text.alt.books} />
                 <h3>{text.literature.title}</h3>
-
-                <p>
-                    {text.literature.description}
-                </p>
-
+                <p>{text.literature.description}</p>
             </Link>
 
             <Link to="/history" className="card">
-
-                <img src={history} alt="history" />
-
+                <img src={history} alt={text.alt.history} />
                 <h3>{text.history.title}</h3>
-
-                <p>
-                    {text.history.description}
-                </p>
-
+                <p>{text.history.description}</p>
             </Link>
 
             <Link to="/biology" className="card">
-
-                <img src={biology} alt="biology" />
-
+                <img src={biology} alt={text.alt.biology} />
                 <h3>{text.biology.title}</h3>
-
-                <p>
-                    {text.biology.description}
-                </p>
-
+                <p>{text.biology.description}</p>
             </Link>
-
         </section>
     )
 }

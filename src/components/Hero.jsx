@@ -4,27 +4,27 @@ import { useLanguage } from "../context/LanguageContext"
 const copy = {
     en: {
         title: "Empowering Girls Through Education",
-        description: "NAR.LEN helps girls grow stronger through education, knowledge and inspiration.",
+        description: "NAR.LEN helps girls grow stronger through education, knowledge, and inspiration.",
         mission: "Our Mission",
-        missionTooltip: "Our mission is to empower and educate young ladies by raising their awareness of topics which are usually overlooked at schools. We want to create a safe and convenient space for learning.",
+        missionTooltip: "We create a safe and supportive space where girls can learn about topics that are often skipped or explained too briefly at school.",
         cta: "Get Involved",
-        imageAlt: "girls"
+        imageAlt: "Girls standing together"
     },
     ru: {
-        title: "Раскрывая силу девушек через образование",
-        description: "NAR.LEN помогает девушкам становиться сильнее через образование, знания и вдохновение.",
+        title: "Раскрываем силу девушек через образование",
+        description: "NAR.LEN помогает девушкам становиться увереннее через знания, образование и вдохновение.",
         mission: "Наша миссия",
-        missionTooltip: "Наша миссия заключается в том, чтобы поддерживать и просвещать девушек, повышая их осведомлённость о темах, которые часто остаются без внимания в школах. Мы хотим создать безопасное и удобное пространство для обучения.",
+        missionTooltip: "Мы создаём безопасное и поддерживающее пространство, где девушки могут узнавать о темах, которые в школе часто не объясняют совсем или затрагивают слишком кратко.",
         cta: "Присоединиться",
-        imageAlt: "девушки"
+        imageAlt: "Девушки вместе"
     },
     kz: {
         title: "Қыздарды білім арқылы қолдау",
         description: "NAR.LEN қыздарға білім, таным және шабыт арқылы күшейе түсуге көмектеседі.",
         mission: "Біздің миссиямыз",
-        missionTooltip: "Біздің миссиямыз - мектептерде жиі назардан тыс қалатын тақырыптар бойынша қыздардың хабардарлығын арттырып, оларды қолдау және білім беру. Біз оқу үшін қауіпсіз әрі ыңғайлы орта құрғымыз келеді.",
+        missionTooltip: "Біз мектепте жиі толық түсіндірілмейтін тақырыптарды қауіпсіз әрі қолдаушы ортада үйренуге мүмкіндік береміз.",
         cta: "Қосылу",
-        imageAlt: "қыздар"
+        imageAlt: "Бірге тұрған қыздар"
     }
 }
 
@@ -34,19 +34,13 @@ function Hero() {
 
     return (
         <section className="hero">
-
             <div className="hero-text">
-
                 <h1>{text.title}</h1>
 
-                <p>
-                    {text.description}
-                </p>
+                <p>{text.description}</p>
 
                 <div className="hero-buttons">
-
                     <div className="tooltip-container">
-
                         <button className="btn-primary">
                             {text.mission}
                         </button>
@@ -54,7 +48,6 @@ function Hero() {
                         <span className="tooltip-text">
                             {text.missionTooltip}
                         </span>
-
                     </div>
 
                     <button
@@ -63,15 +56,12 @@ function Hero() {
                     >
                         {text.cta}
                     </button>
-
                 </div>
-
             </div>
 
             <div className="hero-image">
                 <img src={girls} alt={text.imageAlt} />
             </div>
-
         </section>
     )
 }

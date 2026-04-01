@@ -1374,19 +1374,19 @@ body[data-theme="dark"] .today-card{
     }
 
     .timeline{
-        padding:28px 0 12px;
-        border-radius:22px;
+        padding:22px 0 8px;
+        border-radius:20px;
         background:
             radial-gradient(circle at top left, rgba(123,92,250,0.18), transparent 34%),
             linear-gradient(180deg, #efe6ff 0%, #e8dcff 100%);
     }
 
     .timeline-line{
-        left:28px;
+        left:24px;
         height:100%;
-        width:5px;
+        width:4px;
         background:linear-gradient(180deg, #7b5cfa 0%, #a48dff 100%);
-        box-shadow:0 0 0 6px rgba(123,92,250,0.09);
+        box-shadow:0 0 0 5px rgba(123,92,250,0.08);
     }
 
     .timeline-row:first-child{
@@ -1395,21 +1395,22 @@ body[data-theme="dark"] .today-card{
 
     .timeline-row{
         height:auto;
-        min-height:176px;
+        min-height:148px;
         justify-content:flex-start;
-        padding:48px 10px 10px 64px;
+        padding:38px 8px 10px 56px;
     }
 
     .timeline-year{
-        left:28px;
-        top:10px;
+        left:24px;
+        top:6px;
         transform:translate(-50%, 0);
-        font-size:11px;
-        padding:8px 12px;
-        max-width:150px;
+        font-size:10px;
+        line-height:1.25;
+        padding:7px 10px;
+        max-width:118px;
         text-align:center;
-        border-radius:16px;
-        box-shadow:0 10px 22px rgba(91, 72, 188, 0.26);
+        border-radius:14px;
+        box-shadow:0 8px 18px rgba(91, 72, 188, 0.22);
     }
 
     .timeline-year::before,
@@ -1430,26 +1431,28 @@ body[data-theme="dark"] .today-card{
     }
 
     .timeline-card{
-        padding:18px 16px;
-        border-radius:18px;
-        box-shadow:0 16px 32px rgba(88, 68, 182, 0.14);
+        padding:15px 14px;
+        border-radius:16px;
+        box-shadow:0 14px 28px rgba(88, 68, 182, 0.12);
         border:1px solid rgba(123,92,250,0.12);
+        background:linear-gradient(180deg, rgba(255,255,255,0.98), rgba(248,243,255,0.98));
     }
 
     .timeline-card:hover{
-        transform:translateY(-6px);
+        transform:translateY(-4px);
     }
 
     .timeline-card h3{
-        margin:0 0 8px;
-        font-size:21px;
+        margin:0 0 6px;
+        font-size:18px;
+        line-height:1.25;
         color:#44338f;
     }
 
     .timeline-card p{
         margin:0;
-        font-size:14px;
-        line-height:1.55;
+        font-size:13px;
+        line-height:1.5;
         color:#5a5478;
     }
 
@@ -1557,14 +1560,15 @@ body[data-theme="dark"] .today-card{
     .today-card{
         width:100%;
         min-height:auto;
-        padding:20px 18px;
+        padding:18px 16px;
         border-radius:20px;
         backdrop-filter:blur(10px);
     }
 
     .today-card h3,
     .today-card p{
-        text-align:left;
+        width:100%;
+        text-align:center;
     }
 }
 
@@ -1583,31 +1587,36 @@ body[data-theme="dark"] .today-card{
     }
 
     .timeline-row{
-        padding-left:52px;
-        padding-right:8px;
+        min-height:132px;
+        padding:34px 6px 8px 48px;
     }
 
     .timeline-line,
     .timeline-year{
-        left:22px;
+        left:20px;
     }
 
     .timeline-year{
-        max-width:118px;
-        font-size:11px;
-        padding:7px 8px;
+        max-width:100px;
+        font-size:9px;
+        line-height:1.2;
+        padding:6px 7px;
+        border-radius:12px;
     }
 
     .timeline-card{
-        padding:16px 14px;
+        padding:13px 12px;
+        border-radius:14px;
     }
 
     .timeline-card h3{
-        font-size:18px;
+        font-size:16px;
+        margin-bottom:5px;
     }
 
     .timeline-card p{
-        font-size:13px;
+        font-size:12px;
+        line-height:1.45;
     }
 
     .modal-text{
@@ -1640,7 +1649,7 @@ body[data-theme="dark"] .today-card{
     }
 
     .today-card{
-        padding:18px 16px;
+        padding:16px 14px;
     }
 
     .today-icon{

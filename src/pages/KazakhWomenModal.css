@@ -253,38 +253,93 @@ body[data-theme="dark"] .women-card{
     .women-modal{
         width:100%;
         max-width:none;
-        max-height:90vh;
-        border-radius:24px 24px 0 0;
+        max-height:82dvh;
+        border-radius:22px 22px 0 0;
     }
 
     .women-container{
-        padding:56px 16px 20px;
+        padding:46px 12px 12px;
     }
 
     .women-title{
-        font-size:30px;
-        margin-bottom:28px;
+        font-size:24px;
+        margin-bottom:14px;
     }
 
     .women-card{
-        gap:14px;
-        padding:14px;
-        margin-bottom:20px;
+        flex-direction:column;
+        align-items:stretch;
+        gap:10px;
+        padding:12px;
+        margin-bottom:10px;
         min-height:auto;
+        border-radius:16px;
+        background:rgba(255,255,255,0.92);
+        box-shadow:0 16px 32px rgba(0,0,0,0.12);
     }
 
     .women-card img{
-        width:110px;
-        height:140px;
+        width:100%;
+        height:150px;
+        border-radius:12px;
+        object-fit:cover;
+        object-position:center top;
+        box-shadow:0 10px 18px rgba(0,0,0,0.12);
+    }
+
+    .women-card > div{
+        display:flex;
+        flex-direction:column;
+        gap:6px;
     }
 
     .women-card h3{
-        font-size:18px;
-        margin:4px 0 8px;
+        font-size:17px;
+        line-height:1.2;
+        margin:0;
     }
 
     .women-card p{
-        font-size:14px;
+        font-size:12px;
         line-height:1.45;
+        margin:0;
+    }
+
+    body[data-theme="dark"] .women-card{
+        background:rgba(28,35,57,0.94);
+        box-shadow:0 18px 34px rgba(0,0,0,0.28);
+    }
+}
+
+@media (max-width:480px){
+    .women-container{
+        padding:40px 10px 10px;
+    }
+
+    .women-title{
+        font-size:21px;
+        line-height:1.2;
+        margin-bottom:12px;
+    }
+
+    .women-card{
+        gap:8px;
+        padding:10px;
+        margin-bottom:8px;
+        border-radius:14px;
+    }
+
+    .women-card img{
+        height:128px;
+        border-radius:10px;
+    }
+
+    .women-card h3{
+        font-size:15px;
+    }
+
+    .women-card p{
+        font-size:11px;
+        line-height:1.4;
     }
 }

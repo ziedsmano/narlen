@@ -12,8 +12,8 @@ import LiteraturePage from "./pages/LiteraturePage"
 import BiologyPage from "./pages/BiologyPage"
 import QuoteBar from "./components/QuoteBar"
 import InspiringSection from "./components/InspiringSection"
-import ReadAloudButton from "./components/ReadAloudButton"
 import ScrollToTop from "./components/ScrollToTop"
+import BottomNav from "./components/BottomNav"
 import "./style.css"
 
 function App(){
@@ -48,8 +48,6 @@ function App(){
             <QuoteBar/>
 
             <main id="main-content" className="app-main">
-                <ReadAloudButton/>
-
                 <Routes>
 
                     <Route path="/" element={
@@ -79,6 +77,8 @@ function App(){
 
                 </Routes>
             </main>
+
+            <BottomNav/>
 
             <Footer/>
 

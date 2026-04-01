@@ -46,15 +46,17 @@ const copy = {
             questionSuccess: "Question sent successfully!"
         },
         heroTitle: "Your Growing Body: A Beautiful Biology Journey",
-        heroText: "Explore the natural science of puberty and your development with clear guidance.",
+        heroText: "Explore puberty and body development with clear, supportive explanations.",
         heroButton: "Explore Biology",
+        heroAlt: "Biology illustration",
         videosTitle: "Dive Into Your Biology",
-        videosText: "Watch supportive videos explaining the changes you experience.",
+        videosText: "Watch gentle, informative videos about the changes your body and emotions go through.",
+        videoTitles: ["Understanding Puberty", "Menstrual Cycle", "Emotional Wellbeing"],
         factsTitle: "Interesting Biology Facts",
         facts: [
-            "Your brain forms new connections during puberty.",
-            "Drinking water supports hormone balance.",
-            "Sleep is essential for growth and emotional health."
+            "Your brain builds new connections during puberty.",
+            "Water supports hormone balance and overall wellbeing.",
+            "Sleep is essential for growth, focus, and emotional health."
         ],
         quiz: {
             eyebrow: "Knowledge Check",
@@ -62,24 +64,25 @@ const copy = {
             subtitle: "One quiz, one clear next step.",
             badge: "Featured quiz",
             cardTitle: "Finish this page with one live biology quiz",
-            cardText: "A short Kahoot works best here as the final step after examining the cards and modals. This allows you to consolidate the given information in your memory for a longer time.",
+            cardText: "A short Kahoot is a helpful final step after reading the cards and opening the modals. It helps you remember the key ideas more clearly.",
+            duration: "5-10 min",
             note: "The quiz opens in a new tab.",
             button: "Open Kahoot Quiz"
         },
         forum: {
-            title: "Join our safe space.",
+            title: "Join our safe space",
             text: "Ask a question anonymously or share your thoughts with other girls in Kazakhstan.",
-            name: "Your Name (optional)",
-            message: "Input to discussion here...",
+            name: "Your name (optional)",
+            message: "Write your message here...",
             button: "Post to Forum",
             sending: "Sending..."
         },
         expert: {
             title: "Connect with an Expert",
-            text: "Have a deeper question? Write to us and a female doctor or counselor will reply privately.",
-            name: "Your Name (optional)",
-            age: "Your Age",
-            message: "Your Question",
+            text: "Have a more personal question? Write to us and a female doctor or counselor will reply privately.",
+            name: "Your name (optional)",
+            age: "Your age",
+            message: "Your question",
             button: "Submit Question",
             sending: "Sending..."
         }
@@ -94,37 +97,40 @@ const copy = {
             questionSuccess: "Вопрос успешно отправлен!"
         },
         heroTitle: "Твоё взрослеющее тело: красивое путешествие по биологии",
-        heroText: "Изучай естественные процессы пубертата и своего развития с понятными объяснениями.",
+        heroText: "Изучай пубертат и изменения тела с понятными и бережными объяснениями.",
         heroButton: "Изучать биологию",
+        heroAlt: "Иллюстрация по биологии",
         videosTitle: "Погружение в биологию",
-        videosText: "Смотри поддерживающие видео о переменах, которые ты переживаешь.",
+        videosText: "Посмотри спокойные и полезные видео о том, как меняются твоё тело, гормоны и эмоции.",
+        videoTitles: ["Что происходит в пубертате", "Менструальный цикл", "Эмоциональное состояние"],
         factsTitle: "Интересные факты о биологии",
         facts: [
             "Во время пубертата мозг формирует новые связи.",
-            "Вода помогает поддерживать гормональный баланс.",
-            "Сон необходим для роста и эмоционального здоровья."
+            "Вода помогает поддерживать гормональный баланс и хорошее самочувствие.",
+            "Сон необходим для роста, концентрации и эмоционального здоровья."
         ],
         quiz: {
             eyebrow: "Проверка знаний",
             title: "Продолжай своё путешествие по биологии",
             subtitle: "Один квиз, один понятный следующий шаг.",
-            badge: "Избранный квиз",
+            badge: "Рекомендуемый квиз",
             cardTitle: "Заверши страницу одним живым квизом по биологии",
-            cardText: "Короткий Kahoot лучше всего подходит здесь как финальный шаг после видео и карточек с фактами. У тебя остаётся одно простое действие: повторить материал и проверить понимание.",
-            note: "Квиз откроется в новой вкладке. Теперь здесь оставлена только одна ссылка на квиз по биологии.",
+            cardText: "Короткий Kahoot хорошо подходит как финальный шаг после карточек и модалок. Так основные идеи легче запоминаются и лучше закрепляются.",
+            duration: "5-10 мин",
+            note: "Квиз откроется в новой вкладке.",
             button: "Открыть Kahoot"
         },
         forum: {
-            title: "Присоединяйся к нашему безопасному пространству.",
-            text: "Задай вопрос анонимно или поделись своими мыслями с другими девушками Казахстана.",
+            title: "Присоединяйся к нашему безопасному пространству",
+            text: "Задай вопрос анонимно или поделись мыслями с другими девушками Казахстана.",
             name: "Твоё имя (необязательно)",
-            message: "Напиши сообщение для обсуждения...",
+            message: "Напиши своё сообщение...",
             button: "Опубликовать на форуме",
             sending: "Отправка..."
         },
         expert: {
             title: "Связаться со специалистом",
-            text: "Есть более глубокий вопрос? Напиши нам, и женщина-врач или консультант ответит тебе лично.",
+            text: "Есть более личный вопрос? Напиши нам, и женщина-врач или консультант ответит тебе приватно.",
             name: "Твоё имя (необязательно)",
             age: "Твой возраст",
             message: "Твой вопрос",
@@ -141,38 +147,41 @@ const copy = {
             questionRequired: "Алдымен сұрағыңызды жазыңыз.",
             questionSuccess: "Сұрағыңыз сәтті жіберілді!"
         },
-        heroTitle: "Өсіп келе жатқан денең: биологиядағы әдемі саяхат",
-        heroText: "Жыныстық жетілу мен өз дамуыңның табиғи ғылымын түсінікті бағытпен зертте.",
+        heroTitle: "Өсіп келе жатқан денең: биологиядағы әдемі сапар",
+        heroText: "Жыныстық жетілу мен дене өзгерістерін түсінікті әрі қолдаушы түсіндірмелермен зертте.",
         heroButton: "Биологияны зерттеу",
+        heroAlt: "Биология иллюстрациясы",
         videosTitle: "Биологияңа тереңірек үңіл",
-        videosText: "Басыңнан өтіп жатқан өзгерістерді түсіндіретін қолдаушы бейнелерді қара.",
+        videosText: "Денеңде, гормондарыңда және сезімдеріңде болатын өзгерістер туралы пайдалы видеоларды қара.",
+        videoTitles: ["Жыныстық жетілу туралы", "Етеккір циклі", "Эмоциялық саулық"],
         factsTitle: "Биология туралы қызықты деректер",
         facts: [
             "Жыныстық жетілу кезінде ми жаңа байланыстар құрады.",
-            "Су ішу гормондық тепе-теңдікті қолдайды.",
-            "Ұйқы өсу мен эмоциялық денсаулық үшін өте маңызды."
+            "Су гормондық тепе-теңдік пен жалпы саулықты қолдайды.",
+            "Ұйқы өсу, зейін және эмоциялық денсаулық үшін өте маңызды."
         ],
         quiz: {
             eyebrow: "Білімді тексеру",
-            title: "Биологиядағы саяхатыңды жалғастыр",
+            title: "Биологиядағы сапарыңды жалғастыр",
             subtitle: "Бір квиз, бір анық келесі қадам.",
-            badge: "Таңдаулы квиз",
-            cardTitle: "Бұл бетті бір тірі биология квизімен аяқта",
-            cardText: "Қысқа Kahoot бейнелер мен факт карталарынан кейінгі соңғы қадам ретінде өте қолайлы. Ол саған бір ғана қарапайым әрекет береді: үйренгеніңді қайталау және түсінігіңді тексеру.",
-            note: "Квиз жаңа бетте ашылады. Енді мұнда биология бойынша тек бір квиз сілтемесі қалдырылды.",
+            badge: "Ұсынылған квиз",
+            cardTitle: "Бұл бетті бір биология квизімен аяқта",
+            cardText: "Қысқа Kahoot карточкалар мен модальдарды қарап шыққаннан кейінгі соңғы қадам ретінде өте ыңғайлы. Ол негізгі ойларды жақсырақ есте сақтауға көмектеседі.",
+            duration: "5-10 мин",
+            note: "Квиз жаңа бетте ашылады.",
             button: "Kahoot ашу"
         },
         forum: {
-            title: "Қауіпсіз ортамызға қосыл.",
+            title: "Қауіпсіз ортамызға қосыл",
             text: "Сұрағыңды аноним түрде қой немесе Қазақстандағы басқа қыздармен ойыңды бөліс.",
             name: "Атың (міндетті емес)",
-            message: "Талқылауға хабарлама жаз...",
+            message: "Хабарыңды осында жаз...",
             button: "Форумға жіберу",
             sending: "Жіберілуде..."
         },
         expert: {
             title: "Маманмен байланыс",
-            text: "Тереңірек сұрағың бар ма? Бізге жаз, әйел дәрігер немесе кеңесші саған жеке жауап береді.",
+            text: "Жеке әрі тереңірек сұрағың бар ма? Бізге жаз, әйел дәрігер немесе кеңесші саған жеке жауап береді.",
             name: "Атың (міндетті емес)",
             age: "Жасың",
             message: "Сұрағың",
@@ -185,11 +194,9 @@ const copy = {
 function BiologyPage() {
     const { language } = useLanguage()
     const text = copy[language]
-
     const [openBrain, setOpenBrain] = useState(false)
     const [openWater, setOpenWater] = useState(false)
     const [sleepOpen, setSleepOpen] = useState(false)
-
     const [forumForm, setForumForm] = useState(initialForumForm)
     const [questionForm, setQuestionForm] = useState(initialQuestionForm)
     const [isForumSending, setIsForumSending] = useState(false)
@@ -222,8 +229,8 @@ function BiologyPage() {
         }
     }
 
-    const handleForumSubmit = async (e) => {
-        e.preventDefault()
+    const handleForumSubmit = async (event) => {
+        event.preventDefault()
 
         if (!forumForm.message.trim()) {
             alert(text.alerts.forumRequired)
@@ -231,12 +238,7 @@ function BiologyPage() {
         }
 
         setIsForumSending(true)
-
-        const isSent = await sendMessage({
-            type: "Forum Post",
-            name: forumForm.name.trim(),
-            message: forumForm.message.trim()
-        })
+        const isSent = await sendMessage({ type: "Forum Post", name: forumForm.name.trim(), message: forumForm.message.trim() })
 
         if (isSent) {
             alert(text.alerts.forumSuccess)
@@ -246,8 +248,8 @@ function BiologyPage() {
         setIsForumSending(false)
     }
 
-    const handleQuestionSubmit = async (e) => {
-        e.preventDefault()
+    const handleQuestionSubmit = async (event) => {
+        event.preventDefault()
 
         if (!questionForm.message.trim()) {
             alert(text.alerts.questionRequired)
@@ -255,7 +257,6 @@ function BiologyPage() {
         }
 
         setIsQuestionSending(true)
-
         const isSent = await sendMessage({
             type: "Expert Question",
             name: questionForm.name.trim(),
@@ -272,265 +273,161 @@ function BiologyPage() {
     }
 
     return (
-
         <div className="biology-page">
-
             <img src={microscope} className="bio-decor micro2" alt="" />
             <img src={microscope} className="bio-decor micro3" alt="" />
             <img src={microscope} className="bio-decor micro4" alt="" />
-
             <img src={atom} className="bio-decor atom1" alt="" />
             <img src={atom} className="bio-decor atom2" alt="" />
             <img src={atom} className="bio-decor atom4" alt="" />
 
             <div className="bio-top-bg">
-
                 <section className="bio-hero">
-
                     <div className="bio-hero-text">
-
                         <h1>{text.heroTitle}</h1>
-
-                        <p>
-                            {text.heroText}
-                        </p>
-
+                        <p>{text.heroText}</p>
                         <button
                             className="explore-btn"
-                            onClick={() => {
-                                document.getElementById("facts").scrollIntoView({ behavior: "smooth" })
-                            }}
+                            onClick={() => document.getElementById("facts").scrollIntoView({ behavior: "smooth" })}
                         >
                             {text.heroButton}
                         </button>
-
                     </div>
 
-                    <img
-                        src={heroImg}
-                        className="bio-hero-img"
-                        alt="biology"
-                    />
-
+                    <img src={heroImg} className="bio-hero-img" alt={text.heroAlt} />
                 </section>
-
             </div>
 
             <section className="bio-videos">
-
                 <h2>{text.videosTitle}</h2>
-
-                <p>
-                    {text.videosText}
-                </p>
+                <p>{text.videosText}</p>
 
                 <div className="video-grid">
-
-                    <div className="video-card">
-                        <iframe
-                            src="https://www.youtube.com/embed/LcKlJc_AG2k"
-                            title="Understanding Puberty"
-                            allowFullScreen
-                        ></iframe>
-                    </div>
-
-                    <div className="video-card">
-                        <iframe
-                            src="https://www.youtube.com/embed/KpMOjUN-_eg"
-                            title="Menstrual Cycle"
-                            allowFullScreen
-                        ></iframe>
-                    </div>
-
-                    <div className="video-card">
-                        <iframe
-                            src="https://www.youtube.com/embed/9XIRrAKgmwE"
-                            title="Emotional Wellbeing"
-                            allowFullScreen
-                        ></iframe>
-                    </div>
-
+                    {[
+                        "https://www.youtube.com/embed/LcKlJc_AG2k",
+                        "https://www.youtube.com/embed/KpMOjUN-_eg",
+                        "https://www.youtube.com/embed/9XIRrAKgmwE"
+                    ].map((src, index) => (
+                        <div className="video-card" key={src}>
+                            <iframe src={src} title={text.videoTitles[index]} allowFullScreen></iframe>
+                        </div>
+                    ))}
                 </div>
-
             </section>
 
             <div className="bio-gradient-divider"></div>
 
             <section id="facts" className="bio-facts">
-
                 <h2>{text.factsTitle}</h2>
 
                 <div className="facts-grid">
-
-                    <div
-                        className="fact-card"
-                        onClick={() => setOpenBrain(true)}
-                    >
+                    <div className="fact-card" onClick={() => setOpenBrain(true)}>
                         <img src={brain} className="fact-icon" alt="" />
                         <p>{text.facts[0]}</p>
                     </div>
 
-                    <div
-                        className="fact-card"
-                        onClick={() => setOpenWater(true)}
-                    >
+                    <div className="fact-card" onClick={() => setOpenWater(true)}>
                         <img src={water} className="fact-icon" alt="" />
                         <p>{text.facts[1]}</p>
                     </div>
 
-                    <div
-                        className="fact-card"
-                        onClick={() => setSleepOpen(true)}
-                    >
+                    <div className="fact-card" onClick={() => setSleepOpen(true)}>
                         <img src={sleep} className="fact-icon" alt="" />
                         <p>{text.facts[2]}</p>
                     </div>
-
                 </div>
-
             </section>
 
             <section className="bio-quiz-section">
-
                 <div className="quiz-header">
-
                     <h2>{text.quiz.eyebrow}</h2>
-
                     <h1>{text.quiz.title}</h1>
-
                     <h3>{text.quiz.subtitle}</h3>
-
                 </div>
 
                 <div className="bio-kahoot-panel">
-
                     <div className="bio-kahoot-copy">
                         <span className="bio-kahoot-badge">{text.quiz.badge}</span>
-
                         <h3>{text.quiz.cardTitle}</h3>
-
-                        <p>
-                            {text.quiz.cardText}
-                        </p>
+                        <p>{text.quiz.cardText}</p>
                     </div>
 
                     <div className="bio-kahoot-action-card">
-                        <div className="bio-kahoot-time">5-10 min</div>
-
-                        <p className="bio-kahoot-note">
-                            {text.quiz.note}
-                        </p>
-
-                        <a
-                            className="bio-kahoot-button"
-                            href={BIOLOGY_KAHOOT_URL}
-                            target="_blank"
-                            rel="noreferrer"
-                        >
+                        <div className="bio-kahoot-time">{text.quiz.duration}</div>
+                        <p className="bio-kahoot-note">{text.quiz.note}</p>
+                        <a className="bio-kahoot-button" href={BIOLOGY_KAHOOT_URL} target="_blank" rel="noreferrer">
                             {text.quiz.button}
                         </a>
                     </div>
-
                 </div>
 
                 <div className="quiz-cards">
-
                     <form onSubmit={handleForumSubmit} className="quiz-card">
-
                         <div className="quiz-title">
-
                             <img src={chat} className="quiz-icon" alt="" />
-
                             <h4>{text.forum.title}</h4>
-
                         </div>
 
-                        <p>
-                            {text.forum.text}
-                        </p>
+                        <p>{text.forum.text}</p>
 
                         <input
                             value={forumForm.name}
-                            onChange={(e) => setForumForm((prev) => ({ ...prev, name: e.target.value }))}
+                            onChange={(event) => setForumForm((prev) => ({ ...prev, name: event.target.value }))}
                             placeholder={text.forum.name}
                         />
 
                         <textarea
                             value={forumForm.message}
-                            onChange={(e) => setForumForm((prev) => ({ ...prev, message: e.target.value }))}
+                            onChange={(event) => setForumForm((prev) => ({ ...prev, message: event.target.value }))}
                             placeholder={text.forum.message}
                         ></textarea>
 
                         <button className="quiz-btn" type="submit" disabled={isForumSending}>
                             {isForumSending ? text.forum.sending : text.forum.button}
                         </button>
-
                     </form>
 
                     <form onSubmit={handleQuestionSubmit} className="quiz-card">
-
                         <div className="quiz-title">
-
                             <img src={doctor} className="quiz-icon" alt="" />
-
                             <h4>{text.expert.title}</h4>
-
                         </div>
 
-                        <p>
-                            {text.expert.text}
-                        </p>
+                        <p>{text.expert.text}</p>
 
                         <input
                             name="name"
                             value={questionForm.name}
-                            onChange={(e) => setQuestionForm((prev) => ({ ...prev, name: e.target.value }))}
+                            onChange={(event) => setQuestionForm((prev) => ({ ...prev, name: event.target.value }))}
                             placeholder={text.expert.name}
                         />
 
                         <input
                             name="age"
                             value={questionForm.age}
-                            onChange={(e) => setQuestionForm((prev) => ({ ...prev, age: e.target.value }))}
+                            onChange={(event) => setQuestionForm((prev) => ({ ...prev, age: event.target.value }))}
                             placeholder={text.expert.age}
                         />
 
                         <textarea
                             name="message"
                             value={questionForm.message}
-                            onChange={(e) => setQuestionForm((prev) => ({ ...prev, message: e.target.value }))}
+                            onChange={(event) => setQuestionForm((prev) => ({ ...prev, message: event.target.value }))}
                             placeholder={text.expert.message}
                         ></textarea>
 
                         <button type="submit" className="quiz-btn" disabled={isQuestionSending}>
                             {isQuestionSending ? text.expert.sending : text.expert.button}
                         </button>
-
                     </form>
-
                 </div>
-
             </section>
 
-            <BrainModal
-                isOpen={openBrain}
-                onClose={() => setOpenBrain(false)}
-            />
-
-            <WaterModal
-                isOpen={openWater}
-                onClose={() => setOpenWater(false)}
-            />
-
-            <SleepModal
-                isOpen={sleepOpen}
-                onClose={() => setSleepOpen(false)}
-            />
-
+            <BrainModal isOpen={openBrain} onClose={() => setOpenBrain(false)} />
+            <WaterModal isOpen={openWater} onClose={() => setOpenWater(false)} />
+            <SleepModal isOpen={sleepOpen} onClose={() => setSleepOpen(false)} />
         </div>
-
     )
-
 }
 
 export default BiologyPage
